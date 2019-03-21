@@ -42,10 +42,10 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 
-//create graphiql application -not for production
-// app.use('/graphiql', graphiqlExpress({ endpointURL: "/graphql" }
+//create graphiql application 
+app.use('/graphiql', graphiqlExpress({ endpointURL: "/graphql" }
 
-// ))
+))
 
 //connect schemas with graphql
 app.use('/graphql', 
@@ -60,12 +60,10 @@ graphqlExpress({
     }
 }));
 
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('client/build'));
+app.use(express.static('public'));
 
-    app.get("*", (req,res) => {
-        res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-    })
+app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "public", "index.html"));
 }
 
 const PORT = process.env.PORT || 4444;
