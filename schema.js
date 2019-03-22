@@ -2,7 +2,7 @@ exports.typeDefs = `
 
 type Post {
     _id: ID
-    title: String!
+    subject: String!
     content: String!
     createdAt: String
     likes: Int
@@ -22,7 +22,7 @@ type Query {
 }
 
 type Mutation {
-    addPost(title: String!, content: String!, username: String): Post
+    addPost(subject: String!, content: String!, username: String): Post
 }
 
 `;
