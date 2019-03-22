@@ -11,9 +11,9 @@ exports.resolvers={
         //this is a mutation that allows you to add more posts
         //we destructured out title content and username from args
         //we destructured post out of ctx
-        addPost: async (root, { title, content, username }, { Post }) => {
+        addPost: async (root, { subject, content, username }, { Post }) => {
             const newPost = await new Post({
-                title,
+                subject,
                 content,
                 username
             }).save();
