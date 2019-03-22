@@ -22,7 +22,7 @@ class Cards extends React.Component{
             </div>
             <div className="extra content">
               <a>
-                <i className="user icon"></i>
+                <i className="github icon"></i>
                 22 Friends
               </a>
             </div>
