@@ -8,11 +8,12 @@ import LoginBtn from "./LoginBtn";
 
 const App = () => (
   <div className="App">
-   
+
     <Post />
     {/* =================Panel Layout =================*/}
     <div className="ui  center aligned padded grid">
             <div className="ten wide white column leftPanel">
+            <h1>Helllo PROJECT SEED</h1>
               <Cards />
             
             </div>
