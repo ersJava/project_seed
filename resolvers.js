@@ -5,6 +5,10 @@ exports.resolvers={
         getAllPosts: async (root, args, { Post }) => {
             const allPosts = await Post.find();
             return allPosts;
+        },
+        getAllComments: async (root, args, { Comment }) => {
+            const allComments = await Comment.find();
+            return allComments;
         }
     },
     Mutation: {
@@ -18,6 +22,13 @@ exports.resolvers={
                 username
             }).save();
             return newPost
+        },
+        addComment: async (root, { comment, username}, { Comment }) => {
+            const newComment = await new Comment ({
+                comment, 
+                username
+            }).save();
+            return newComment
         }
     }
 };
