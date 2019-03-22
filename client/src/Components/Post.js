@@ -10,7 +10,7 @@ const Post = () => (
             if (error) return <div>Error!</div>
             console.log(data);
             return (
-                <p>Posts</p>
+                <div></div>
             )
         }}
     </Query>

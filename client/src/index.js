@@ -5,6 +5,7 @@ import App from './Components/App';
 
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
+import 'semantic-ui-css/semantic.min.css';
 
 const client = new ApolloClient({
   uri: "https://projectseeddev.herokuapp.com/graphql"

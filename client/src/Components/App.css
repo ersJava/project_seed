@@ -31,3 +31,10 @@
     transform: rotate(360deg);
   }
 }
+
+.leftPanel{
+  height:100vh;
+  background-image: linear-gradient(to top, #ccff99 0%, #f4fae6 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
