@@ -17,12 +17,21 @@ type User {
     favorites: [Post]
 }
 
+type Comment {
+    _id: ID
+    comment: String!
+    createdAt: String
+    username: String
+}
+
 type Query {
     getAllPosts: [Post]
+    getAllComments: [Comment]
 }
 
 type Mutation {
     addPost(subject: String!, content: String!, username: String): Post
+    addComment(comment: String!, username: String): Comment
 }
 
 `;
