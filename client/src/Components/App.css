@@ -1,8 +1,8 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
-.App-logo {
+/* .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
@@ -21,20 +21,35 @@
 
 .App-link {
   color: #61dafb;
-}
+} */
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+} */
+
+h1 {
+  color: rgb(92, 3, 92);
+  font-family: 'Gilroy-Bold'
 }
 
+h2 {
+  color: rgb(92, 3, 92);
+  font-family: 'Gilroy-Light';
+  font-style: italic;
+}
+
+/* -----------
+Left Panel Styles
+----------- */
 .leftPanel{
   height:100vh;
   background-image: linear-gradient(to top, #ccff99 0%, #f4fae6 100%);
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
