@@ -14,29 +14,34 @@ function Login() {
             or have an exciting idea for a new application!</h2>
 
        {/* ================= Current Project Grid=================*/}
+       <div className = "ui grid "><div className="column two wide"></div>
+  {/* fake column to help span it out properly */}
+        <div className = "column twelve wide">
+           
        <div className="ui two column doubling stackable grid container">
-        <div className="column">
-          <div className="ui segment"> <Cards/> </div>
+       <        div className="column ">
+                  <div className="ui segment"> <Cards/> </div>
+                </div>
+              <div className="column">
+                  <div className="ui segment"> <Cards/> </div>
+                </div>
+              <div className="column">
+                <div className="ui segment"> <Cards/> </div>
+              </div>
+              <div className="column">
+                <div className="ui segment"><Cards/> </div>
+              </div>
+              <div className="column">
+                <div className="ui segment"><Cards/> </div>
+              </div>
+              <div className="column">
+              <div className="ui segment"><Cards/> </div>
+              </div>
+      </div>
+      </div>
         </div>
-      <div className="column">
-          <div className="ui segment"> <Cards/> </div>
         </div>
-      <div className="column">
-        <div className="ui segment"> <Cards/> </div>
-      </div>
-      <div className="column">
-        <div className="ui segment"><Cards/> </div>
-      </div>
-      <div className="column">
-        <div className="ui segment"><Cards/> </div>
-      </div>
-      <div className="column">
-      <div className="ui segment"><Cards/> </div>
-      </div>
-      </div>
-
-        </div>
-        {/* ================= Right Panel Layout =================*/}
+        
             <div className="six wide column rightPanel">
               <Logo/>
               <LoginBtn />
@@ -45,6 +50,7 @@ function Login() {
           </div>
           {/* ================= End Panel Layout================= */}
   </div>
+  
   );
 }
 
