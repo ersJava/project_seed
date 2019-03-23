@@ -1,15 +1,11 @@
-import React from 'react';
-import './App.css';
-import Post from "./Post";
-import Login from "../pages/Login"
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import React from "react";
+import Cards from "../Components/Card";
+import Logo from "../Components/Logo";
+import LoginBtn from "../Components/LoginBtn";
 
-
-const App = () => (
-  <div className="App">
-
-    <Post />
-    {/* ================= Left Panel Layout =================*/}
+function Login() {
+  return (
+<div className="App">
     <div className="ui center aligned very padded grid">
       <div className="ten wide white column leftPanel">
         <h1>Start GROWING your skills with Project Seed!</h1>
@@ -18,7 +14,7 @@ const App = () => (
             or have an exciting idea for a new application!</h2>
 
        {/* ================= Current Project Grid=================*/}
-       <div className="ui three column doubling stackable grid container">
+       <div className="ui two column doubling stackable grid container">
         <div className="column">
           <div className="ui segment"> <Cards/> </div>
         </div>
@@ -48,15 +44,8 @@ const App = () => (
             </div>
           </div>
           {/* ================= End Panel Layout================= */}
-=======
-   
-   <Router>
-      <div>
-        
-        <Route exact path="/" component={Login} />
-      </div>
-    </Router>
+  </div>
+  );
+}
 
-
-export default App
-   
+export default Login;
