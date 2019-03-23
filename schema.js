@@ -24,14 +24,25 @@ type Comment {
     username: String
 }
 
+type Project {
+    _id: ID
+    title: String!
+    githubRepo: String!
+    deployLink: String!
+    screenshot: String!
+    username: String
+}
+
 type Query {
     getAllPosts: [Post]
     getAllComments: [Comment]
+    getAllProjects: [Project]
 }
 
 type Mutation {
     addPost(subject: String!, content: String!, username: String): Post
     addComment(comment: String!, username: String): Comment
+    addProject(title: String!, githubRepo: String!, deployLink: String!, screenshot: String!, description: String!, username: String): Project
 }
 
 `;

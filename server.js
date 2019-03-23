@@ -10,6 +10,7 @@ require("dotenv").config({ path: "variables.env"});
 const Post = require("./models/Post");
 const User = require("./models/User");
 const Comment = require("./models/Comment");
+const Project = require("./models/Project")
 
 //bring in graphql middleware
 const { graphiqlExpress, graphqlExpress } = require("apollo-server-express");
@@ -58,7 +59,8 @@ graphqlExpress({
     context: {
         Post,
         User,
-        Comment
+        Comment,
+        Project
     }
 }));
 
