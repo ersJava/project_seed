@@ -13,6 +13,10 @@ exports.resolvers={
         getAllComments: async (root, args, { Comment }) => {
             const allComments = await Comment.find();
             return allComments;
+        },
+        getAllProjects: async (root, args, { Project }) => {
+            const allProjects = await Project.find();
+            return allProjects
         }
     },
     Mutation: {
@@ -41,6 +45,17 @@ exports.resolvers={
                 username
             }).save();
             return newComment
+        },
+        addProject: async (root, { title, githubRepo, deployLink, screenshot, description, username }, { Project }) => {
+            const newProject = await new Project({
+              title,
+              githubRepo,
+              deployLink,
+              screenshot,
+              description,
+              username
+            }).save();
+            return newProject
         }
     }
 };
