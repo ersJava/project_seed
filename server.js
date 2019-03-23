@@ -11,6 +11,9 @@ const Post = require("./models/Post");
 const User = require("./models/User");
 const Comment = require("./models/Comment");
 
+const Project = require("./models/Project")
+const StartPost = require("./models/StartPost");
+
 //bring in graphql middleware
 const { graphiqlExpress, graphqlExpress } = require("apollo-server-express");
 const { makeExecutableSchema } = require("graphql-tools");
@@ -58,7 +61,10 @@ graphqlExpress({
     context: {
         Post,
         User,
-        Comment
+        Comment,
+        Project,
+        StartPost
+
     }
 }));
 
