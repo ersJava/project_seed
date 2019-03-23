@@ -33,12 +33,12 @@
 } */
 
 h1 {
-  color: rgb(92, 3, 92);
+  color: white;
   font-family: 'Gilroy-Bold'
 }
 
 h2 {
-  color: rgb(92, 3, 92);
+  color:white;
   font-family: 'Gilroy-Light';
   font-style: italic;
 }
@@ -48,7 +48,7 @@ Left Panel Styles
 ----------- */
 .leftPanel{
   height:100vh;
-  background-image: linear-gradient(to top, #ccff99 0%, #f4fae6 100%);
+  background-color: #82ac11;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
