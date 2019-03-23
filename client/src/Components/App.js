@@ -19,24 +19,24 @@ const App = () => (
             or have an exciting idea for a new application!</h2>
 
        {/* ================= Current Project Grid=================*/}
-       <div class="ui three column doubling stackable grid container">
-        <div class="column">
-          <div class="ui segment"> <Cards/> </div>
+       <div className="ui three column doubling stackable grid container">
+        <div className="column">
+          <div className="ui segment"> <Cards/> </div>
         </div>
-      <div class="column">
-          <div class="ui segment"> <Cards/> </div>
+      <div className="column">
+          <div className="ui segment"> <Cards/> </div>
         </div>
-      <div class="column">
-        <div class="ui segment"> <Cards/> </div>
+      <div className="column">
+        <div className="ui segment"> <Cards/> </div>
       </div>
-      <div class="column">
-        <div class="ui segment"><Cards/> </div>
+      <div className="column">
+        <div className="ui segment"><Cards/> </div>
       </div>
-      <div class="column">
-        <div class="ui segment"><Cards/> </div>
+      <div className="column">
+        <div className="ui segment"><Cards/> </div>
       </div>
-      <div class="column">
-      <div class="ui segment"><Cards/> </div>
+      <div className="column">
+      <div className="ui segment"><Cards/> </div>
       </div>
       </div>
 
