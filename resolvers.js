@@ -6,6 +6,10 @@ exports.resolvers={
             const allPosts = await Post.find();
             return allPosts;
         },
+        getAllStartPosts: async (root, args, { StartPost }) => {
+            const allStartPosts = await StartPost.find();
+            return allStartPosts;
+        },
         getAllComments: async (root, args, { Comment }) => {
             const allComments = await Comment.find();
             return allComments;
@@ -26,6 +30,14 @@ exports.resolvers={
                 username
             }).save();
             return newPost
+        },
+        addStartPost: async (root, { subject, content, username }, { StartPost }) => {
+            const newStartPost = await new StartPost({
+                subject,
+                content,
+                username
+            }).save();
+            return newStartPost
         },
         addComment: async (root, { comment, username }, { Comment }) => {
             const newComment = await new Comment ({
