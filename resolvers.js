@@ -23,7 +23,7 @@ exports.resolvers={
             }).save();
             return newPost
         },
-        addComment: async (root, { comment, username}, { Comment }) => {
+        addComment: async (root, { comment, username }, { Comment }) => {
             const newComment = await new Comment ({
                 comment, 
                 username
