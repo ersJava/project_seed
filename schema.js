@@ -9,6 +9,16 @@ type Post {
     username: String
 }
 
+type StartPost {
+    _id: ID
+    subject: String!
+    content: String!
+    createdAt: String
+    likes: Int
+    username: String
+}
+
+
 type User {
     _id: ID
     username: String! @unique
@@ -26,11 +36,13 @@ type Comment {
 
 type Query {
     getAllPosts: [Post]
+    getAllStartPosts: [StartPost]
     getAllComments: [Comment]
 }
 
 type Mutation {
     addPost(subject: String!, content: String!, username: String): Post
+    addStartPost(subject: String!, content: String!, username: String): StartPost
     addComment(comment: String!, username: String): Comment
 }
 
