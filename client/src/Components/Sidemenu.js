@@ -1,10 +1,11 @@
 import React from 'react'
 import { Header, Icon, Image, Menu, Segment, Sidebar, Container } from 'semantic-ui-react'
-import ContainerEX from './Container';
+import InnerLayout from './InnerLayout';
+
 
 const Side= () => (
   <Sidebar.Pushable>
-    <Sidebar as={Menu} animation='push' icon='labeled' inverted vertical visible width='thin'>
+    <Sidebar as={Menu} animation='push' icon='labeled' inverted vertical visible width='wide'>
     <Menu.Item as='a'>
         <Icon name='users' />
         START A TEAM
@@ -21,8 +22,8 @@ const Side= () => (
 
     <Sidebar.Pusher>
       <Segment basic>
-        <Header as='h3'>Projects</Header>
-      <ContainerEX />
+        <Header as='h1'>Featured Projects</Header>
+      <InnerLayout />
       </Segment>
     </Sidebar.Pusher>
   </Sidebar.Pushable>

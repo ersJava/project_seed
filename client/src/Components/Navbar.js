@@ -5,7 +5,7 @@ import logo2 from "../assets/images/psLogo.png"
 
 const Navbar = () => (
   <div>
-    <Menu attached='top' className="inverted">
+    <Menu attached='top' className="inverted" visible='wide'>
     <Menu.Item className="menu2 inverted">
        PROJECT SEED
         </Menu.Item>
