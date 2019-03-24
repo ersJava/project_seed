@@ -3,6 +3,7 @@ import { gql } from 'apollo-boost';
 export const GET_ALL_POSTS = gql`
     query{
         getAllPosts {
+            _id
             subject
             content
             createdAt
@@ -14,11 +15,12 @@ export const GET_ALL_POSTS = gql`
 export const GET_ALL_PROJECTS = gql`
     query{
         getAllProjects {
+            _id
             title
             githubRepo
             deployLink
             screenshot
-            # description
+            description
             username
         }
     }
