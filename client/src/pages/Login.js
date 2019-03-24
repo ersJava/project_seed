@@ -26,20 +26,21 @@ const Login = () => {
         {({ data, loading, error}) => {
           if (loading) return <div>Loading</div>
           if (error) return <div>Error</div>
-          console.log(data);
-          return(
-            <p>Whatever</p>
+          console.log(data.getAllProjects);
+          return( <div>{data.getAllProjects
+            .map(project => <Cards 
+              key = {project._id} 
+              title={project.title} 
+              description={project.description} 
+              deployLink={project.deployLink}
+              githubRepo={project.githubRepo}
+              screenshot={project.screenshot}
+            />)}</div>
           )
         }}
        
        </Query>
        
-       <Cards />
-       <Cards />
-       <Cards />
-       <Cards />
-       <Cards />
-      <Cards />
       </div>
       </div>
         </div>

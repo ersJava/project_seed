@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Placeholder from "./Placeholder"
 
-class Cards extends React.Component{
+class Cards extends Component{
     render(){
         return(
           <div className="column">
@@ -9,20 +9,20 @@ class Cards extends React.Component{
               <div>
                 <div className="ui card fluid">
                   <div className="image">
-                    <div><Placeholder /></div>
+                    <div><Placeholder screenshot={ this.props.screenshot } /></div>
                   </div>
                   <div className="content">
                     <br></br>
-                    <a className="header">Awesome Project</a>
+                    <a href={ this.props.deployLink } target="_blank" className="header">{ this.props.title }</a>
                     <div className="meta">
                       <span className="date"></span>
                     </div>
                     <div className="description">
-                      Short description about the awesome project here.
+                      { this.props.description }
               </div>
                   </div>
                   <div className="extra content">
-                    <a>
+                    <a href = { this.props.githubRepo } target="_blank">
                       <i className="github icon"></i>
                     </a>
                   </div>

@@ -6,7 +6,7 @@ class Placeholder extends React.Component{
     render(){
         return(
             <img
-            src={placeholder}
+            src={this.props.screenshot}
             style={{ height: 150, position: "relative", top: 30 }}
           />
     )
