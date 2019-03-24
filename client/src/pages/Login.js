@@ -2,8 +2,10 @@ import React from "react";
 import Cards from "../Components/Card";
 import Logo from "../Components/Logo";
 import LoginBtn from "../Components/LoginBtn";
+import { Query } from 'react-apollo';
+import { GET_ALL_PROJECTS  } from "../queries";
 
-function Login() {
+const Login = () => {
   return (
 <div className="App">
     <div className="ui center aligned very padded grid">
@@ -19,24 +21,25 @@ function Login() {
         <div className = "column twelve wide">
            
        <div className="ui two column doubling stackable grid container">
-       <        div className="column ">
-                  <div className="ui segment"> <Cards/> </div>
-                </div>
-              <div className="column">
-                  <div className="ui segment"> <Cards/> </div>
-                </div>
-              <div className="column">
-                <div className="ui segment"> <Cards/> </div>
-              </div>
-              <div className="column">
-                <div className="ui segment"><Cards/> </div>
-              </div>
-              <div className="column">
-                <div className="ui segment"><Cards/> </div>
-              </div>
-              <div className="column">
-              <div className="ui segment"><Cards/> </div>
-              </div>
+
+       <Query query={GET_ALL_PROJECTS}>
+        {({ data, loading, error}) => {
+          if (loading) return <div>Loading</div>
+          if (error) return <div>Error</div>
+          console.log(data);
+          return(
+            <p>Whatever</p>
+          )
+        }}
+       
+       </Query>
+       
+       <Cards />
+       <Cards />
+       <Cards />
+       <Cards />
+       <Cards />
+      <Cards />
       </div>
       </div>
         </div>
