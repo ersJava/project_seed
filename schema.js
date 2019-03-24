@@ -40,6 +40,7 @@ type Project {
     githubRepo: String!
     deployLink: String!
     screenshot: String!
+    description: String!
     username: String
 }
 
