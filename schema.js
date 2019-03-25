@@ -51,11 +51,20 @@ type Query {
     getAllProjects: [Project]
 }
 
+type Token {
+    token: String!
+}
+
 type Mutation {
     addPost(subject: String!, content: String!, username: String): Post
+    
     addStartPost(subject: String!, content: String!, username: String): StartPost
+
     addComment(comment: String!, username: String): Comment
+
     addProject(title: String!, githubRepo: String!, deployLink: String!, screenshot: String!, description: String!, username: String): Project
+    
+    signupUser(username: String!, email: String!, password: String!): Token
 }
 
 `;
