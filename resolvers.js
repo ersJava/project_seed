@@ -1,3 +1,11 @@
+const jwt = require('jsonwebtoken');
+
+const createToken = (user, secret, expiresIn) => {
+    const { username, email } = user;
+    return jwt.sign({ username, email}, secret, { expiresIn })
+}
+
+
 exports.resolvers={
     Query: {
         //this is a query for getting all posts 
@@ -56,6 +64,19 @@ exports.resolvers={
               username
             }).save();
             return newProject
+        },
+        //this method is for new users to sign up
+        signupUser: async (root, { username, email, password}, { User}) => {
+            const user = await User.findOne({ username });
+            if (user) {
+                throw new Error("Oops looks like you already signed up!"); 
+            }
+            const newUser = await new User({
+                username,
+                email,
+                password
+            }).save();
+            return { token: createToken(newUser, process.env.SECRET, '1hr')}
         }
     }
 };
