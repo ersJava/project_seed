@@ -7,7 +7,7 @@ const Navbar = () => (
   <div>
     <Menu attached='top' className="inverted menu2" visible='wide'>
     <Menu.Item className="menu2 inverted">
-       PROJECT SEED
+       <a href="/main">PROJECT SEED</a>
      
         </Menu.Item>
         
