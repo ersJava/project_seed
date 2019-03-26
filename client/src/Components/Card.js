@@ -4,13 +4,14 @@ import Placeholder from "./Placeholder"
 class Cards extends Component{
     render(){
         return(
-          <div className="column">
-            <div className="ui segment"> 
+          <div className="column cardHolder">
+            
               <div>
-                <div className="ui card fluid">
+                <div className="ui card ">
                   <div className="image">
-                    <div><Placeholder screenshot={ this.props.screenshot } /></div>
-                  </div>
+                    <div className="thumbnailImg"> <Placeholder screenshot={ this.props.screenshot } /></div>
+                    <div className="break"> </div>
+                    </div>
                   <div className="content">
                     <br></br>
                     <a href={ this.props.deployLink } target="_blank" className="header">{ this.props.title }</a>
@@ -28,7 +29,7 @@ class Cards extends Component{
                   </div>
                 </div>
               </div>       
-             </div>
+             
           </div>
 
 

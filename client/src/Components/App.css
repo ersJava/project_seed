@@ -14,16 +14,39 @@ Left Panel Styles
 ----------- */
 .leftPanel{
   height:100vh;
-  overflow:scroll;
+  overflow:hidden;
   background-color: #82ac11;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-.card{
-  margin: 5px !important;
+div.ui.card{
+  margin: 10px !important;
+  float:left !important;
+  width: 350px;
+  min-height: 400px;
 }
 
+.image{
+  height: 100% !important;
+  background-color: #e5ebde !important;
+}
+
+.thumbnailImg{
+  height: 100% !important;
+}
+
+.break{
+  height: 50px;
+}
+
+.cardHolder{
+  position:relative;
+  top: 10px;
+  float:left;
+  display: inline-block;
+  margin-right: 20px;
+}
 /* -----------
 Menu B Styles
 ----------- */
