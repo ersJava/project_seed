@@ -5,10 +5,12 @@ import logo2 from "../assets/images/psLogo.png"
 
 const Navbar = () => (
   <div>
-    <Menu attached='top' className="inverted" visible='wide'>
+    <Menu attached='top' className="inverted menu2" visible='wide'>
     <Menu.Item className="menu2 inverted">
        PROJECT SEED
+     
         </Menu.Item>
+        
       <Menu.Menu position='right' className="inverted">
         <Dropdown className="inverted" item icon='user circle inverted outline' simple>
         <Dropdown.Menu className="inverted" >
