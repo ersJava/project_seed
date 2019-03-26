@@ -21,7 +21,7 @@ https://wwww.projectseed.dev
 * React
 * Semantics
 * GraphQL
-* Apollo
+* Apollo 
 
 ### Collaboration By
 
