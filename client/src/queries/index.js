@@ -31,7 +31,27 @@ export const GET_ALL_PROJECTS = gql`
 
 // User query
 
-// User mutation
+export const GET_CURRENT_USER = gql`
+    query {
+        getCurrentUser {
+            username
+            email
+        }
+    }
+`
+
+// User mutations
+
+export const SIGNIN_USER = gql`
+    mutation($username: String!, $password: String!) {
+        signinUser(
+            username: $username,
+            password: $password
+        ) {
+            token
+        }
+    }
+`
 
 export const SIGNUP_USER = gql`
     mutation($username: String!, $email: String!, $password: String!) {
