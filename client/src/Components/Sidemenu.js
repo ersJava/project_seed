@@ -5,7 +5,7 @@ import InnerLayout from './InnerLayout';
 
 const Side= () => (
   <Sidebar.Pushable>
-    <Sidebar as={Menu} animation='push' icon='labeled' inverted vertical visible width='thin'>
+    <Sidebar as={Menu} animation='push' icon='labeled'  vertical visible width='thin'>
     <Menu.Item as='a'>
         <Icon name='users' />
         START A TEAM

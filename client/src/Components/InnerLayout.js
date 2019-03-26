@@ -21,7 +21,7 @@ const InnerLayout = () => (
                 <div class="column">
                 <div class="ui cardHolder"><Cards/></div>
                 </div>
-                </div>
+                </div>  
 )
 
 export default InnerLayout

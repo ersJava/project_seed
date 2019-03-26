@@ -50,14 +50,22 @@ div.ui.card{
 /* -----------
 Menu B Styles
 ----------- */
-.menu{
-  background-color: #4f1d31 !important;
+div.ui.vertical.labeled.icon.ui.push.left.thin.visible.sidebar.menu{
+  background-image: linear-gradient(to top, #e5ebde , white);
   border-top:none;
-  color:white !important;
+  color:black !important;
+  box-shadow:none;
+  /* border-bottom: 0.5px solid; */
+  
 }
 
+div.ui.top.attached.inverted.menu2.menu{
+  background-color: #4f1d31;
+ 
+}
 .menu2{
-  width: 150px;
+  width: 151px;
+  /* border-bottom: 0.5px solid; */
 }
 div.ui.menu .ui.dropdown .menu> .item {
   color: white !important;
