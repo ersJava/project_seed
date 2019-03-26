@@ -14,7 +14,7 @@ Left Panel Styles
 ----------- */
 .leftPanel{
   height:100vh;
-  overflow:hidden;
+  overflow:scroll;
   background-color: #82ac11;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -56,6 +56,9 @@ Menu B Styles
   color:white !important;
 }
 
+.menu2{
+  width: 150px;
+}
 div.ui.menu .ui.dropdown .menu> .item {
   color: white !important;
   /* order matters when addressing elements which is why adding div to the front 
