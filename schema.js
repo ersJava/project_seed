@@ -64,6 +64,8 @@ type Mutation {
 
     addProject(title: String!, githubRepo: String!, deployLink: String!, screenshot: String!, description: String!, username: String): Project
     
+    signinUser(username: String!, password: String!): Token
+
     signupUser(username: String!, email: String!, password: String!): Token
 }
 
