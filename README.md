@@ -1,4 +1,4 @@
-<img src="https://github.com/Rahat-ch/project_seed/blob/master/client/src/assets/images/psLogo.png" width="230" height="230" alt="project seed logo">
+<img src="https://github.com/Rahat-ch/project_seed/blob/master/client/src/assets/images/psLogo.png" width="240" height="230" alt="project seed logo">
 
 # Project Seed
 > tagline
@@ -14,13 +14,14 @@ https://wwww.projectseed.dev
 
 ## Project Details
 
-### APIs
-* Github 
+<!-- ### APIs
+* Github  -->
 
 ### Technologies Used
 * React
-* Ant Design
+* Semantics
 * GraphQL
+* Apollo 
 
 ### Collaboration By
 
