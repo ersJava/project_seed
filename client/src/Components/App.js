@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 
+// import StartPost from "./StartPost";
 import Post from "./Post";
 import Login from "../pages/Login";
 import Main from "../pages/Main";
@@ -15,6 +16,7 @@ const App = ({ refetch }) => (
   <div className="App"> 
     <Router>
       <div>
+        {/* <Route exact path="/StartPost" component={StartPost} /> */}
         <Route exact path="/" component={Login} />
         <Route exact path="/main" component={Main} />
         <Route exact path="/signin" render={() => <Signin refetch={refetch}/>} />
