@@ -9,7 +9,7 @@ import { ApolloProvider } from "react-apollo";
 import 'semantic-ui-css/semantic.min.css';
 
 const client = new ApolloClient({
-      uri: "https://projectseeddev.herokuapp.com/graphiql",
+      uri: "https://projectseeddev.herokuapp.com/graphql",
       fetchOptions: {
         credentials: "include"
       },
