@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom'
 import { Mutation } from 'react-apollo';
 import { SIGNIN_USER } from '../../queries';
 import Error from '../../Components/Error';
+import { Button, Header, Image, Modal } from 'semantic-ui-react'
 
 const initialState = {
     username: "",
@@ -49,7 +50,12 @@ class Signin extends Component {
                    {(signinUser, { data, loading, error}) => {
 
                        return(
-                <form onSubmit={event => this.handleSubmit(event, signinUser)}>
+
+                        <Modal trigger={<Button style={{backgroundColor:"white",border:"solid #450F42", color:"#450F42",width:330,height:50}}>LOG IN</Button>}>
+                        <Modal.Header>Select a Photo</Modal.Header>
+                        <Modal.Content image>
+                          <Image wrapped size='medium' src='https://react.semantic-ui.com/images/avatar/large/rachel.png' />
+                          <form onSubmit={event => this.handleSubmit(event, signinUser)}>
                    
                    <input 
                    type="text" 
@@ -76,6 +82,10 @@ class Signin extends Component {
                     {error && <Error error={error} />}
                 
                 </form> 
+                        </Modal.Content>
+                      </Modal>
+                
+                
                        )
                    }}
                
