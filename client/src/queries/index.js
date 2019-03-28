@@ -14,6 +14,20 @@ export const GET_ALL_POSTS = gql`
     }
 `;
 
+export const GET_ONE_POST = gql`
+    query($_id: ID!) {
+        getOnePost(_id: $_id) {
+             _id
+             subject
+             content
+             createdAt
+             likes
+            username
+            }
+        }
+    
+`
+
 // Project query
 export const GET_ALL_PROJECTS = gql`
     query{

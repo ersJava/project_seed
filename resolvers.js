@@ -15,6 +15,10 @@ exports.resolvers={
             const allPosts = await Post.find();
             return allPosts;
         },
+        getOnePost: async (root, { _id }, { Post }) => {
+            const post = await Post.findOne({ _id });
+            return post;
+        },
         getAllStartPosts: async (root, args, { StartPost }) => {
             const allStartPosts = await StartPost.find();
             return allStartPosts;
