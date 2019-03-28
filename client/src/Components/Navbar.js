@@ -2,6 +2,8 @@ import React from 'react'
 import { Dropdown, Icon, Menu, Segment } from 'semantic-ui-react'
 import Logo from '../Components/Logo'
 import logo2 from "../assets/images/psLogo.png"
+import Logout from '../Components/Logout';
+
 
 const Navbar = ({ session }) => (
   <div>
@@ -17,7 +19,7 @@ const Navbar = ({ session }) => (
         <Dropdown.Menu className="inverted" >
           <Dropdown.Item >Profile</Dropdown.Item>
           <Dropdown.Item>Settings</Dropdown.Item>
-          <Dropdown.Item>Logout</Dropdown.Item>
+          <Dropdown.Item><Logout /></Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
        
