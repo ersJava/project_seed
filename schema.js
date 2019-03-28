@@ -46,6 +46,7 @@ type Project {
 
 type Query {
     getAllPosts: [Post]
+    getOnePost(_id: ID!): Post
     getAllStartPosts: [StartPost]
     getAllComments: [Comment]
     getAllProjects: [Project]
