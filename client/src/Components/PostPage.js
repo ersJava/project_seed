@@ -6,14 +6,21 @@ import { GET_ONE_POST } from '../queries'
 
 const PostPage = ({ match }) => {
     const { _id } = match.params;
-    console.log(_id);
+    
     return(
         <Query query={GET_ONE_POST} variables={{ _id }}>
             {({ data, loading, error}) => {
                 if(loading) return <div>Loading</div>
                 if (error) return <div>Error</div>
                 console.log(data);
-                return <div>Post Page</div>
+                return (<div>
+                    <p> Subject: {data.getOnePost.subject}</p>
+                    <p> Username: {data.getOnePost.username}</p>
+                    <p> Created: {data.getOnePost.createdAt}</p>
+                    <p> Content: {data.getOnePost.content}</p>
+                    <p> Likes: {data.getOnePost.likes}</p>
+                    <button>Like</button>
+                </div>)
             }}
         </Query>
     )
