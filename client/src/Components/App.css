@@ -9,6 +9,10 @@ h2 {
   font-style: italic;
 }
 
+*{
+
+  
+}
 /* -----------
 Left Panel Styles
 ----------- */
@@ -100,4 +104,65 @@ div.ui.container.stackable.two.column.grid{
 .loginStyle{
   position:relative;
   top: 20px;
+}
+
+/* Form */
+
+.signupForm{
+  /* text-align: center; */
+  /* width:100%; */
+  position: relative;
+  top:5px;
+}
+
+div.ui.modal.transition.visible.active{
+  
+  width: 500px;
+  height: 500px;
+  text-align: right;
+  vertical-align: middle;
+  background-image: url('../assets/images/pslogo_letter_only.svg');
+  background-size: 44%;
+  background-repeat:no-repeat;
+  background-position:50% 2%;
+  border-radius: 10px;
+}
+
+div.ui.modal>.image.content{
+  padding-top:50px;
+  height:650px;
+  width: 500px;
+  text-align: center;
+  vertical-align: middle;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  
+ 
+}
+
+#signUpLogo{
+  position: relative;
+  top:-20px;
+  left:20px;
+  margin-bottom:0px;
+}
+
+.signupInput{
+  border:none;
+  margin:10px;
+  width:330px;
+  height:40px;
+  border-radius: 5px;
+  padding:10px;
+}
+
+.submitBtn{
+  position: relative;
+  top:30px;
+  
+  font-size:16px !important;
+  border-radius: 5px;
+
 }
