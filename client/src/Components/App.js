@@ -11,15 +11,15 @@ import Signup from "../pages/Auth/Signup";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 
-const App = ({ refetch }) => (
+const App = ({ refetch, session }) => (
 
   <div className="App"> 
     <Router>
       <div>
         {/* <Route exact path="/StartPost" component={StartPost} /> */}
+        <Route exact path="/main" render={() => <Main session={session}/>} />
         <Route exact path="/" render={() => <Login refetch={refetch}/>} />
         {/* <Route exact path="/" render={() => <Login refetch={refetch}/>} /> */}
-        <Route exact path="/main" component={Main} />
         <Route exact path="/signin" render={() => <Signin refetch={refetch}/>} />
         <Route exact path="/signup" render={() => <Signup refetch={refetch}/>} />
      </div>
