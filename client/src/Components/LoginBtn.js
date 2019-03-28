@@ -6,7 +6,6 @@ import Error from "../Components/Error";
 import { Button, Header, Image, Modal } from "semantic-ui-react";
 import Logoletter from "../assets/images/pslogo_letter_only.png";
 import { render } from "react-dom";
-import ReactSVG from "react-svg";
 import Leaf from "../assets/images/leaf.svg";
 
 const initialState = {
@@ -86,7 +85,7 @@ class LoginBtn extends Component {
                     <div id="" />
                     <br />
                   </div>
-                  <ReactSVG src={{ Leaf }} />
+                 
                   <Modal.Content image>
                     <form
                       onSubmit={event => this.handleSubmit(event, signupUser)}
