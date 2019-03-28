@@ -10,8 +10,15 @@ const CommentSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    username: {
-        type: String
+    post: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Post",
+        required: true
+    },
+    commentedBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+        required: true
     }
 });
 
