@@ -2,6 +2,7 @@ import React from 'react'
 import { Header, Icon, Image, Menu, Segment, Sidebar, Container } from 'semantic-ui-react'
 import InnerLayout from './InnerLayout';
 import Seedling from "../Components/Seedling"
+import { Link } from 'react-router-dom';
 
 
 const Side= () => (
@@ -24,7 +25,7 @@ const Side= () => (
       <br></br>
       <br></br>
         <Icon name='lightbulb outline' />
-       POST PROJECT IDEA
+       <Link to="/ideas">PROJECT IDEAS</Link>
       </Menu.Item>
       
     </Sidebar>
