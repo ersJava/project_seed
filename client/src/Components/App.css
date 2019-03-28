@@ -90,3 +90,14 @@ div.ui.container.stackable.two.column.grid{
  
   
 }
+
+/* LogoSpace */
+
+.logoSpace{
+  margin-bottom:100px;
+}
+
+.loginStyle{
+  position:relative;
+  top: 20px;
+}

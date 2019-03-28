@@ -8,18 +8,27 @@ const PostSchema = new Schema({
     },
     content: {
         type: String,
+        maxlength: 5000,
         required: true
     },
     createdAt: {
         type: Date,
+        required: true,
         default: Date.now
     },
+    updatedAt: {
+        type: Date,
+        required: true,
+        default: Date.now
+      },
     likes: {
         type: Number,
         default: 0
     },
-    username: {
-        type: String
+    postedBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+        required: true
     }
 })
 

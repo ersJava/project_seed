@@ -17,8 +17,9 @@ const App = ({ refetch, session }) => (
     <Router>
       <div>
         {/* <Route exact path="/StartPost" component={StartPost} /> */}
-        <Route exact path="/" component={Login} />
         <Route exact path="/main" render={() => <Main session={session}/>} />
+        <Route exact path="/" render={() => <Login refetch={refetch}/>} />
+        {/* <Route exact path="/" render={() => <Login refetch={refetch}/>} /> */}
         <Route exact path="/signin" render={() => <Signin refetch={refetch}/>} />
         <Route exact path="/signup" render={() => <Signup refetch={refetch}/>} />
      </div>
