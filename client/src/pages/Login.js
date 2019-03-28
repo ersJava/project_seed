@@ -2,15 +2,18 @@ import React from "react";
 import Cards from "../Components/Card";
 import Logo from "../Components/Logo";
 import LoginBtn from "../Components/LoginBtn";
+import Signin from "../pages/Auth/Signin"
+
 import { Query } from 'react-apollo';
 import { GET_ALL_PROJECTS  } from "../queries";
 
 
-const Login = () => {
+const Login = ({ refetch }) => {
   return (
 <div className="App">
     <div className="ui center aligned very padded grid">
       <div className="ten wide white column stackable leftPanel">
+     
         <h1>Start GROWING your skills with Project Seed!</h1>
         <h2>Project Seed is a friendly online community
             for new developers who want to work on awesome projects, start a team 
@@ -48,9 +51,11 @@ const Login = () => {
         </div>
         
             <div className="six wide column stackable rightPanel">
-              <Logo/>
-              <LoginBtn />
-              <br></br>
+              <div className="logoSpace"><Logo/></div>
+              
+              <div className="loginStyle"><LoginBtn refetch={refetch}/></div>
+              <Signin refetch={refetch}/>
+              <br></br> 
             </div>
           </div>
           {/* ================= End Panel Layout================= */}
