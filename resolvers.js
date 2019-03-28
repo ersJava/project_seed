@@ -23,6 +23,10 @@ exports.resolvers={
             const allComments = await Comment.find();
             return allComments;
         },
+        getStartComments: async (root, args, { StartComment }) => {
+            const allStartComments = await StartComment.find();
+            return allStartComments;
+        },
         getAllProjects: async (root, args, { Project }) => {
             const allProjects = await Project.find();
             return allProjects
@@ -68,6 +72,13 @@ exports.resolvers={
             }).save();
             return newComment
         },
+        addStartComment: async (root, { comment, username }, { StartComment }) => {
+            const newStartComment = await new StartComment ({
+                comment,
+                username
+            }).save();
+            return newStartComment
+        },
         addProject: async (root, { title, githubRepo, deployLink, screenshot, description, username }, { Project }) => {
             const newProject = await new Project({
               title,
@@ -103,6 +114,7 @@ exports.resolvers={
                 password
             }).save();
             return { token: createToken(newUser, process.env.SECRET, '1hr') };
-        }
+        },
+        DeletePost: async (root, {})
     }
 };

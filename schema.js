@@ -27,6 +27,13 @@ type User {
     favorites: [Post]
 }
 
+type StartComment {
+    _id: ID
+    comment: String!
+    createdAt: String
+    username: String
+}
+
 type Comment {
     _id: ID
     comment: String!
@@ -62,6 +69,8 @@ type Mutation {
     addStartPost(subject: String!, content: String!, username: String): StartPost
 
     addComment(comment: String!, username: String): Comment
+
+    addStartComment(comment: String!, username: String): StartComment
 
     addProject(title: String!, githubRepo: String!, deployLink: String!, screenshot: String!, description: String!, username: String): Project
     
