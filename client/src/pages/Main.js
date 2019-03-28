@@ -3,10 +3,10 @@ import Navbar from '../Components/Navbar';
 import Side from '../Components/Sidemenu';
 import '../Components/App.css';
 
-function Login() {
+function Login({ session }) {
     return (
             <div>
-                <Navbar />
+                <Navbar session={session}/>
                 <Side />
             </div>
     );
