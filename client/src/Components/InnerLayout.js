@@ -2,18 +2,18 @@ import React from 'react'
 import Cards from './Card';
 
 const InnerLayout = () => (
-    <div className="ui container stackable two column grid" >
-                <div className="column">
-                <div className="ui cardHolder"><Cards/></div>
+    <div class="ui container stackable two column grid" >
+                <div class="column">
+                <div class="ui cardHolder"><Cards/></div>
                 </div>
-                <div className="column">
-                <div className="ui cardHolder"><Cards/></div>
+                <div class="column">
+                <div class="ui cardHolder"><Cards/></div>
                 </div>
-                <div className="column">
-                <div className="ui cardHolder"><Cards/></div>
+                <div class="column">
+                <div class="ui cardHolder"><Cards/></div>
                 </div>
-                <div className="column">
-                <div className="ui cardHolder"><Cards/></div>
+                <div class="column">
+                <div class="ui cardHolder"><Cards/></div>
                 </div>
               
                 </div>  
