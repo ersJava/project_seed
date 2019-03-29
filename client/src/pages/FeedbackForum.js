@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Query } from 'react-apollo';
 import { GET_ALL_POSTS } from '../queries'
+import { Link } from 'react-router-dom';
 import SinglePost from '../Components/SinglePost';
 
 class FeedbackForum extends Component {
@@ -20,6 +21,7 @@ class FeedbackForum extends Component {
                 }}
 
                </Query>
+               <Link to="/addideas">Add a Post</Link>
             </div>
         );
     }
