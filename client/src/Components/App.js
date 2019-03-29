@@ -11,6 +11,7 @@ import Signup from "../pages/Auth/Signup";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import FeedbackForum from '../pages/FeedbackForum';
 import PostPage from './PostPage';
+import AddIdeasPost from '../pages/AddIdeasPost';
 
 
 const App = ({ refetch, session }) => (
@@ -26,6 +27,7 @@ const App = ({ refetch, session }) => (
         <Route exact path="/signup" render={() => <Signup refetch={refetch}/>} />
         <Route exact path="/ideas" component={FeedbackForum} />
         <Route path="/posts/:_id" component={PostPage} />
+        <Route exact path="/addIdeas" render={() => <AddIdeasPost session={session}/>}  />
      </div>
     </Router>
 </div>)
