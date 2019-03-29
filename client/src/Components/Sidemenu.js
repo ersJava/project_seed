@@ -18,12 +18,15 @@ const Side= () => (
         <Icon name='handshake outline' />
         JOIN A TEAM
       </Menu.Item>
+      <Link to="/ideas">
       <Menu.Item as='a'>
       <br></br>
       <br></br>
         <Icon name='lightbulb outline' />
-       <Link to="/ideas">PROJECT IDEAS</Link>
+       PROJECT IDEAS
       </Menu.Item>
+      </Link>
+      
     </Sidebar>
   </Menu>
 )

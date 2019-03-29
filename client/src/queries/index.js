@@ -28,6 +28,20 @@ export const GET_ONE_POST = gql`
     
 `
 
+//post mutation
+
+export const ADD_POST = gql`
+    mutation($subject: String!, $content: String!, $username: String) {
+        addPost(subject: $subject, content: $content, username: $username){
+            _id
+            subject
+            content
+            createdAt
+            username
+        }
+    }
+`
+
 // Project query
 export const GET_ALL_PROJECTS = gql`
     query{

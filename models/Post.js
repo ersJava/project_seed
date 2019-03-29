@@ -25,10 +25,8 @@ const PostSchema = new Schema({
         type: Number,
         default: 0
     },
-    postedBy: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
-        required: true
+    username: {
+        type: String
     }
 })
 
