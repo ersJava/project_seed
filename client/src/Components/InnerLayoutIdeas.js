@@ -10,7 +10,7 @@ class FeedbackForum extends Component {
             <div>
                <h1>PROJECT IDEAS</h1>
                <h2>Share your project ideas or get help and feedback!</h2>
-               <Query query={GET_ALL_POSTS}>
+               <Query query={GET_ALL_POSTS} fetchPolicy="network-only">
                 {({data,loading,error}) => {
                     if(loading) return <div>Loading</div>;
                     if (error) return <div>Error</div>;
