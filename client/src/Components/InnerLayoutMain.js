@@ -1,7 +1,7 @@
 import React from 'react'
 import Cards from './Card';
 
-const InnerLayout = () => (
+const InnerLayoutMain = () => (
     <div class="ui container stackable two column grid" >
                 <div class="column">
                 <div class="ui cardHolder"><Cards/></div>
@@ -19,4 +19,4 @@ const InnerLayout = () => (
                 </div>  
 )
 
-export default InnerLayout
+export default InnerLayoutMain
