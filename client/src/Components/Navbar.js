@@ -13,7 +13,7 @@ const Navbar = ({ session }) => (
        
      
         </Menu.Item>
-        <h3>Hi {session.getCurrentUser.username}</h3>
+        {/* <h3>Hi {session.getCurrentUser.username}</h3> */}
       <Menu.Menu position='right' className="inverted">
         <Dropdown className="inverted" item icon='user circle inverted outline' simple>
         <Dropdown.Menu className="inverted" >
