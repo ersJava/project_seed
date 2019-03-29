@@ -15,9 +15,9 @@ const Login = ({ refetch }) => {
       <div className="ten wide white column stackable leftPanel">
      
         <div className="specialheader1"><h1>Start GROWING your skills with Project Seed!</h1></div>
-        <h2>Project Seed is a friendly online community
+        <div className="specialheader2"><h2>Project Seed is a friendly online community
             for new developers who want to work on awesome projects, start a team 
-            or have an exciting idea for a new application!</h2>
+            or have an exciting idea for a new application!</h2></div>
 
        {/* ================= Current Project Grid=================*/}
        <div className = "ui grid "><div className="column four wide"></div>

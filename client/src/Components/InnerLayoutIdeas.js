@@ -7,8 +7,9 @@ class FeedbackForum extends Component {
     render() {
         return (
             <div>
-               <h3>Project Ideas</h3>
-               <h3>Share your project ideas or get help and feedback!</h3>
+               <h1>PROJECT IDEAS</h1>
+               <h2>Share your project ideas or get help and feedback!</h2>
+
                <Query query={GET_ALL_POSTS}>
                 {({data,loading,error}) => {
                     if(loading) return <div>Loading</div>;
