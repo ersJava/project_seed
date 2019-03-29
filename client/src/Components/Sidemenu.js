@@ -4,6 +4,7 @@ import Seedling from "../Components/Seedling"
 import { Link } from 'react-router-dom';
 
 const Side= () => (
+
   <Menu vertical>
     <Sidebar as={Menu} animation='push' icon='labeled'  vertical visible width='thin'>
     <Menu.Item as='a'>
@@ -26,6 +27,8 @@ const Side= () => (
       </Menu.Item>
     </Sidebar>
   </Menu>
+  
+    
 )
 
 export default Side
