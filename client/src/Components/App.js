@@ -25,9 +25,9 @@ const App = ({ refetch, session }) => (
         {/* <Route exact path="/" render={() => <Login refetch={refetch}/>} /> */}
         <Route exact path="/signin" render={() => <Signin refetch={refetch}/>} />
         <Route exact path="/signup" render={() => <Signup refetch={refetch}/>} />
-        <Route exact path="/ideas" component={FeedbackForum} />
+        <Route exact path="/ideas" render={() => <FeedbackForum refetch={refetch}/>}  />
         <Route path="/posts/:_id" component={PostPage} />
-        <Route exact path="/addIdeas" render={() => <AddIdeasPost session={session}/>}  />
+        <Route exact path="/addIdeas" render={() => <AddIdeasPost session={session} refetch={refetch}/>}  />
      </div>
     </Router>
 </div>)
