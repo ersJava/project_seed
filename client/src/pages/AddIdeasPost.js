@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import { Mutation } from 'react-apollo';
 import {ADD_POST} from '../queries'
 import Error from '../Components/Error';
@@ -31,8 +32,9 @@ class AddIdeasPost extends Component {
 
     handleSubmit = (event, addPost) => {
         event.preventDefault();
-        addPost().then(({ data }) => {
+        addPost().then( ({ data }) => {
             console.log(data);
+            this.props.history.push("/ideas");
         })
     }
     render() {
@@ -62,4 +64,4 @@ class AddIdeasPost extends Component {
     }
 }
 
-export default AddIdeasPost;
+export default withRouter(AddIdeasPost);

@@ -10,12 +10,12 @@ import '../Components/App.css';
 import InnerLayoutIdeas from '../Components/InnerLayoutIdeas';
 
 
-function Login({ session }) {
+function Login({ session, refetch }) {
     return (
             <div>
                 <Navbar session={session}/>
                 <Side />
-                <InnerLayoutIdeas />
+                <InnerLayoutIdeas refetch={refetch}/>
 
 
                
