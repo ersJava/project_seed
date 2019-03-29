@@ -20,7 +20,8 @@ const Login = ({ refetch }) => {
             or have an exciting idea for a new application!</h2></div>
 
        {/* ================= Current Project Grid=================*/}
-       <div className = "ui grid "><div className="column four wide"></div>
+       <div className = "ui grid ">
+       <div className="column four wide"></div>
   {/* fake column to help span it out properly */}
         <div className = "column twelve wide">
            
