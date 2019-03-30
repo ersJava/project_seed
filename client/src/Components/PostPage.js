@@ -62,18 +62,19 @@ class PostPage extends Component {
                     <i class="thumbs up outline icon"></i>
                     </div>
                     </div>
-                    
-                    <div class="ui animated button" tabindex="0">
-                    
-                  <div class="visible content">
                     <Mutation mutation={DELETE_POST} variables={{ _id }}>
                     {deletePost => (
                         <button
                         onClick={() => this.handleDelete(deletePost)}
                         disabled={user !== data.getOnePost.username}
-                        />
+                        >
+                        Delete
+                        </button>
        )}
                     </Mutation>
+                    <div class="ui animated button" tabindex="0">
+                    
+                  <div class="visible content">
                   
                     <div class="hidden content">
                      <i class="cut icon"></i>
