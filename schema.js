@@ -63,6 +63,8 @@ type Mutation {
     deletePost(_id: ID): Post
 
     likePost(_id: ID!, username: String!): Post
+
+    unlikePost(_id: ID!, username: String!): Post
     
     addStartPost(subject: String!, content: String!, username: String): StartPost
 
