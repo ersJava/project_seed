@@ -92,8 +92,10 @@ export const GET_ALL_START_POSTS = gql`
 export const GET_CURRENT_USER = gql`
     query {
         getCurrentUser {
+            _id
             username
             email
+            favorites
         }
     }
 `;

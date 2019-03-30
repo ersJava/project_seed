@@ -14,7 +14,8 @@ const UserSchema = new Schema({
     },
     email: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     favorites: {
         type: [Schema.Types.ObjectId],
