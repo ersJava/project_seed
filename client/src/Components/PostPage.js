@@ -50,16 +50,7 @@ class PostPage extends Component {
                     {data.getOnePost.likes}
                     </div>
                     <div className="ui button">
-                    <i className="heart icon"></i> Like
-                    </div>
-                    </div>
-                <br />
-                <br />
-
-                    <div class="ui vertical animated button" tabindex="0">
-                    <div class="hidden content">Like</div>
-                    <div class="visible content">
-                    <i class="thumbs up outline icon"></i>
+                    <i className="heart icon"></i> <Like _id={_id}/>
                     </div>
                     </div>
                     <Mutation mutation={DELETE_POST} variables={{ _id }}>
@@ -72,16 +63,19 @@ class PostPage extends Component {
                         </button>
        )}
                     </Mutation>
-                    <div class="ui animated button" tabindex="0">
+                <br />
+                <br />
+                    
+                   
                     
                   <div class="visible content">
                   
                     <div class="hidden content">
-                     <i class="cut icon"></i>
+                     
                     </div>
                     </div>
                     <CommentsFeed/>
-                </div>
+                
                 </div>
                     </Container>
 
