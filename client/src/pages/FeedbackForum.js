@@ -16,8 +16,6 @@ function Login({ session, refetch }) {
                 <Navbar session={session}/>
                 <Side />
                 <InnerLayoutIdeas refetch={refetch}/>
-
-
                
                <Link to="/addideas">Add a Post</Link>
 
