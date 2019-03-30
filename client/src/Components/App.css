@@ -296,3 +296,69 @@ a:hover {
 a:active {
   color: none;
 }
+
+/* ------------Temp----- */
+.addPostTemp{
+  position:relative;
+  background-color:white;
+  margin-left:auto;
+  margin-right:auto;
+  height:100vh;
+  width:100vw;
+  background-image:url('../assets/images/backgroundFlav2.png');
+  background-repeat: no-repeat;
+  background-position: 100% 110%;
+}
+
+.postContainer{
+  top: 150px;
+  position:relative;
+  left:29%;
+  width:100vw;
+  margin-left:auto;
+  margin-right:auto;
+  padding-bottom: 30px;
+}
+
+.postTest{
+  position:relative;
+  margin-top: 30px;
+  border:none;
+  border-radius: 5px;
+  width:400px;
+  font-family: 'Muli', sans-serif;
+ 
+}
+
+.postTest2{
+  position:relative;
+  margin-top: 30px;
+  border:none;
+  border-radius: 5px;
+  width:600px;
+  font-family: 'Muli', sans-serif;
+  background-color:#fbfbfb;
+  border: 1px solid rgb(219, 227, 215);
+}
+
+.postHeader{
+  left:200px;
+  position:relative;
+  margin-left:auto;
+  margin-right:auto;
+  color:#4f1d31;
+  font-family: 'Muli', sans-serif;
+}
+
+
+.postBtn{
+  background-color:#4f1d31;
+  color:white;
+  position: relative;
+  top:30px;
+  height:30px;
+  width:600px;
+  font-size:16px !important;
+  border-radius: 5px;
+  border: 1px solid rgb(219, 227, 215);
+}
