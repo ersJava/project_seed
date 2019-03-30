@@ -44,7 +44,7 @@ class Signin extends Component {
 
     return (
       <div>
-        <h2>Sign in</h2>
+        
         <Mutation mutation={SIGNIN_USER} variables={{ username, password }}>
           {(signinUser, { data, loading, error }) => {
             return (
@@ -96,7 +96,8 @@ class Signin extends Component {
                         backgroundColor: "#450F42",
                         color: "white",
                         width: 330,
-                        height: 50
+                        height: 50,
+                        top:30
                       }}
                       type="submit"
                       disabled={loading || this.validateForm()}
