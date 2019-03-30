@@ -37,11 +37,13 @@ class Like extends React.Component {
       likePost().then(async ({ data }) => {
         // console.log(data);
         await this.props.refetch();
+        window.location.reload();
       });
     } else {
       unlikePost().then(async ({ data }) => {
         // console.log(data);
         await this.props.refetch();
+        window.location.reload();
       });
     }
   };
