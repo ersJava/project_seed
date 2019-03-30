@@ -21,7 +21,7 @@ class Main extends Component {
                                 githubRepo = {project.githubRepo}
                                 screenshot = {project.screenshot}
                             />)}
-                        }</div>)
+                        </div>)
                     }}
                 </Query>
             </div>
