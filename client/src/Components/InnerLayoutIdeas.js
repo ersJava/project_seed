@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import { Query } from 'react-apollo';
 import { GET_ALL_POSTS } from '../queries'
-import SinglePost from '../Components/SinglePost';
+import SinglePost from './SinglePost';
+import { Container } from 'semantic-ui-react';
+
 
 class FeedbackForum extends Component {
     
     render() {
         return (
             <div>
+                <Container>
                <h1>PROJECT IDEAS</h1>
                <h2>Share your project ideas or get help and feedback!</h2>
+                    </Container>
                <Query query={GET_ALL_POSTS} fetchPolicy="network-only">
                 {({data,loading,error}) => {
                     if(loading) return <div>Loading</div>;
