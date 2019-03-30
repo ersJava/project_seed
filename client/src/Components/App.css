@@ -33,7 +33,11 @@ Left Panel Styles
   background-color: #82ac11;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-image: url('../assets/images/backgroundFlav.png');
+  background-position: 30% 100%;
 }
+
+
 
 div.ui.cards{
 
@@ -42,17 +46,40 @@ div.ui.cards{
   margin-left: 3px;
 }
 
-.image{
+.ui.card>.image, .ui.cards>.card>.image {
+
   height: 200px !important;
   background-color: #e5ebde !important;
 }
 .description{
-  height: 150px !important;
+  height: 120px !important;
   
 }
 
 .thumbnailImg{
  
+}
+
+.navbarTitle{
+  position: relative;
+  top:10px;
+  left:45px;
+  font-size: 15px;
+  font-family: 'Gilroy-light';
+  font-weight:bold;
+  color:white;
+}
+
+.a.navbarTitle:hover{
+  font-family: 'Gilroy-light';
+  font-weight:bold;
+  color:white;
+}
+
+.a.navbarTitle:active{
+  font-family: 'Gilroy-light';
+  font-weight:bold;
+  color:white;
 }
 
 .break{
@@ -61,7 +88,7 @@ div.ui.cards{
 
 .cardHolder{
   position:relative;
-  top: 30px;
+  top: 10px;
   float:left;
   display: inline-block;
   margin-right: 10px;
@@ -103,7 +130,7 @@ div.ui.top.attached.inverted.menu2.menu{
  
 }
 .menu2{
-  width: 151px;
+  width: 205px;
   /* border-bottom: 0.5px solid; */
 }
 div.ui.menu .ui.dropdown .menu> .item {
@@ -162,7 +189,7 @@ div.ui.modal.transition.visible.active{
 
 div.ui.modal>.image.content{
   padding-top:50px;
-  height:650px;
+  height:550px;
   width: 500px;
   text-align: center;
   vertical-align: middle;
@@ -170,7 +197,7 @@ div.ui.modal>.image.content{
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;
-  
+  background-color: #e5ebde !important;
  
 }
 
@@ -200,3 +227,46 @@ div.ui.modal>.image.content{
 /* -----------
 Project Idea
 ----------- */
+
+.sideMenu{
+  width:100%;
+  background-image: url('../assets/images/psLogo3.png'),linear-gradient(to top, #e5ebde , white);
+  border-right: 1px solid rgb(219, 227, 215);
+  background-repeat: no-repeat,repeat;
+  background-position: 50% 110%, 0 0;
+  background-size: 10% 50%, fixed cover;
+  color:black !important;
+  box-shadow:none;
+  overflow: hidden;
+  position: relative;
+  display:inline-block;
+  float:left;
+  clear:both;
+ 
+  height: 96vh !important;
+  
+}
+
+.customItem{
+  font-family: 'Gilroy-Light';
+  font-weight: bold;
+  font-size:15px;
+  position:relative;
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+  line-height:200px;
+  border-bottom:1px solid rgb(219, 227, 215);
+  height:200px;
+}
+.customItem:hover{
+  position:relative;
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+  line-height:200px;
+  border-bottom:1px solid rgb(219, 227, 215);
+  height:200px;
+  color:white;
+  background-color:#81ab11;
+}
