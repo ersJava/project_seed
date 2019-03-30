@@ -18,6 +18,7 @@ class PostPage extends Component {
 
     render() {
         const { _id } = this.props.match.params;
+        const user = this.props.session.getCurrentUser.username;
         return (
             <Query query={GET_ONE_POST} variables={{ _id }}>
             {({ data, loading, error}) => {
@@ -31,11 +32,11 @@ class PostPage extends Component {
                     <p> Content: {data.getOnePost.content}</p>
                     <p> Likes: {data.getOnePost.likes}</p>
                     <button>Like</button>
-
                     <Mutation mutation={DELETE_POST} variables={{ _id }}>
                     {deletePost => (
                         <button
                         onClick={() => this.handleDelete(deletePost)}
+                        disabled={user !== data.getOnePost.username}
                         >
                         Delete</button>
                         

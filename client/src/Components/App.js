@@ -26,7 +26,7 @@ const App = ({ refetch, session }) => (
         <Route exact path="/signin" render={() => <Signin refetch={refetch}/>} />
         <Route exact path="/signup" render={() => <Signup refetch={refetch}/>} />
         <Route exact path="/ideas" render={() => <FeedbackForum refetch={refetch}/>}  />
-        <Route path="/posts/:_id" component={PostPage} />
+        <Route path="/posts/:_id" render={() => <PostPage session={session}/>} />
         <Route exact path="/addIdeas" render={() => <AddIdeasPost session={session} refetch={refetch}/>}  />
      </div>
     </Router>
