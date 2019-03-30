@@ -243,8 +243,7 @@ Project Idea
   display:inline-block;
   float:left;
   clear:both;
-  padding:10px;
- 
+  
   height: 96vh !important;
   
 }
@@ -261,17 +260,25 @@ Project Idea
   border-bottom:1px solid rgb(219, 227, 215);
   border-width: 120% !important;
   height:200px;
+  padding-top: 80px !important;
+  padding:10px;
 }
 .customItem:hover{
+  font-family: 'Muli', sans-serif;
+  font-weight: bold;
+  font-size:15px;
   position:relative;
   margin-left:auto;
   margin-right:auto;
   text-align: center;
   padding-top:90px;
   border-bottom:1px solid rgb(219, 227, 215);
+  border-width: 120% !important;
   height:200px;
-  color:white;
   background-color:#81ab11;
+  padding:10px;
+  
+  color:white;
 }
 
 .ui.center.aligned.header {
