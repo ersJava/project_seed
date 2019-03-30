@@ -3,10 +3,9 @@ import Cards from "../Components/Card";
 import Logo from "../Components/Logo";
 import LoginBtn from "../Components/LoginBtn";
 import Signin from "../pages/Auth/Signin"
-import CustomCarousel from '../Components/Carousel'
+
 import { Query } from 'react-apollo';
 import { GET_ALL_PROJECTS  } from "../queries";
-import Logoletter from "../assets/images/pslogo_letter_only.png";
 
 
 const Login = ({ refetch }) => {
@@ -14,35 +13,44 @@ const Login = ({ refetch }) => {
 <div className="App">
     <div className="ui center aligned very padded grid">
       <div className="ten wide white column stackable leftPanel">
-       
-       <div id="loginH1"> <h1 >Start GROWING your skills with Project Seed!</h1>
-        <h2>Project Seed is a friendly online community
+      <div className="appContainer"></div>
+        <div className="specialheader1"><h1>Start GROWING your skills with Project Seed!</h1></div>
+        <br></br>
+        <div className="specialheader2"><h2>Project Seed is a friendly online community
             for new developers who want to work on awesome projects, start a team 
-            or have an exciting idea for a new application!</h2>
-            <CustomCarousel 
-          items={arrayOfItemObjects} // 3
-          
-            />
-          
-            {/*  */}
-            
-           
-         
-           {/*  */}
-         
+            or have an exciting idea for a new application!</h2></div>
+
        {/* ================= Current Project Grid=================*/}
-       <div className = "ui grid "><div className="column four wide"></div>
+       <div className = "ui grid ">
+       <div className="column four wide"></div>
   {/* fake column to help span it out properly */}
         <div className = "column twelve wide">
            
        <div className="ui two column doubling  grid container">
+       <div className="cardHolderContainer">
+       <Query query={GET_ALL_PROJECTS}>
+        {({ data, loading, error}) => {
+          if (loading) return <div>Loading</div>
+          if (error) return <div>Error</div>
+          console.log(data.getAllProjects);
+          return( <div className="cardHolder">{data.getAllProjects
+            .map(project =><Cards 
+              key = {project._id} 
+              title={project.title} 
+              description={project.description} 
+              deployLink={project.deployLink}
+              githubRepo={project.githubRepo}
+              screenshot={project.screenshot}
+            />)}</div>
+          )
+        }}
        
-
-      
+       </Query>
+       </div>
       </div>
       </div>
         </div>
-        </div></div>
+        </div>
         
             <div className="six wide column stackable rightPanel">
               <div className="logoSpace"><Logo/></div>
@@ -52,8 +60,8 @@ const Login = ({ refetch }) => {
               <br></br> 
             </div>
           </div>
-          {/* ================= End Panel Layout================= */}
           
+          {/* ================= End Panel Layout================= */}
   </div>
   
   );
