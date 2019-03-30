@@ -66,12 +66,12 @@ class PostPage extends Component {
                     <div class="ui animated button" tabindex="0">
                     
                   <div class="visible content">
-                     <Mutation mutation={DELETE_POST} variables={{ _id }}>
+                    <Mutation mutation={DELETE_POST} variables={{ _id }}>
                     {deletePost => (
                         <button
                         onClick={() => this.handleDelete(deletePost)}
                         disabled={user !== data.getOnePost.username}
-                        >Delete</div>
+                        />
        )}
                     </Mutation>
                   
@@ -81,11 +81,12 @@ class PostPage extends Component {
                     </div>
                     <CommentsFeed/>
                 </div>
+                </div>
                     </Container>
 
-                </div>)
-            }}
-        </Query>
+                </div>
+                )}}
+            </Query>
         );
     }
 }

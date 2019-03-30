@@ -41,7 +41,7 @@ exports.resolvers={
                 model: 'Post'
             });
             return user;
-        }
+        },
     },
     Mutation: {
         //this is a mutation that allows you to add more posts
