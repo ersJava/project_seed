@@ -11,8 +11,8 @@ class FeedbackForum extends Component {
         return (
             <div>
                 <Container>
-               <h1>PROJECT IDEAS</h1>
-               <h2>Share your project ideas or get help and feedback!</h2>
+               <h1>PROJECT IDEAS <i class="lightbulb outline icon"></i></h1>
+               <p>Share your project ideas or get help and feedback!</p>
                     </Container>
                <Query query={GET_ALL_POSTS} fetchPolicy="network-only">
                 {({data,loading,error}) => {
