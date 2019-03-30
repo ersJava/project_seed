@@ -56,6 +56,10 @@ exports.resolvers={
             }).save();
             return newPost
         },
+        deletePost: async (root, { _id }, {Post}) => {
+            const post = await Post.findOneAndRemove({ _id });
+            return post
+        },
         addStartPost: async (root, { subject, content, username, comments }, { StartPost }) => {
             const newStartPost = await new StartPost({
                 subject,
