@@ -90,7 +90,7 @@ class LoginBtn extends Component {
                     <div id="" />
                     <br />
                   </div>
-                  <ReactSVG src={{ Leaf }} />
+                  
                   <Modal.Content image>
                     <form
                       onSubmit={event => this.handleSubmit(event, signupUser)}
