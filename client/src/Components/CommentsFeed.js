@@ -67,7 +67,7 @@ const commentsFeed = () => (
     <div className="field">
       <textarea></textarea>
     </div>
-    <div className="ui blue labeled submit icon button">
+    <div className="ui basic green labeled submit icon button">
       <i className="icon edit"></i> Add Reply
     </div>
   </form>
