@@ -6,12 +6,12 @@ import InnerLayoutMain from '../Components/InnerLayoutMain';
 
 function Login({ session }) {
     return (
-            <div>
+            <div style={{overflow: "hidden",height:"100vh"}}>
                 <Navbar session={session}/>
                 <div className="ui grid">
                
-                <div className="four wide column"><Side /></div>
-                <div className="ten wide column"><InnerLayoutMain /></div> 
+                <div className="two wide column"><Side /></div>
+                <div style={{overflow: "hidden"}} className="fourteen wide column" ><InnerLayoutMain /></div> 
 
                 </div>
             </div>

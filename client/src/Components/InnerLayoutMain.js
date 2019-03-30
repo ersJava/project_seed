@@ -6,7 +6,7 @@ import Cards from './Card';
 class Main extends Component {
     render() {
         return (
-            <div>
+            <div style={{overflow: "auto"}}>
                 <Query query = {GET_ALL_PROJECTS}>
                     {({ data, loading, error}) => {
                         if (loading) return <div>Loading</div>
