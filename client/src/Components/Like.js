@@ -28,7 +28,7 @@ class Like extends Component {
             <Mutation mutation={LIKE_POST} variables={{_id, username}}>
             {likePost => {
 
-                return username && <button onClick={() => this.handleLike(likePost)}>Like</button>
+                return username && <span onClick={() => this.handleLike(likePost)}>Like</span>
             }}
             
             </Mutation>

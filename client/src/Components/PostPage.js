@@ -50,37 +50,32 @@ class PostPage extends Component {
                     {data.getOnePost.likes}
                     </div>
                     <div className="ui button">
-                    <i className="heart icon"></i> Like
+                    <i className="heart icon"></i> <Like _id={_id}/>
                     </div>
                     </div>
-                <br />
-                <br />
-
-                    <div class="ui vertical animated button" tabindex="0">
-                    <div class="hidden content">Like</div>
-                    <div class="visible content">
-                    <i class="thumbs up outline icon"></i>
-                    </div>
-                    </div>
-                    
-                    <div class="ui animated button" tabindex="0">
-                    
-                  <div class="visible content">
                     <Mutation mutation={DELETE_POST} variables={{ _id }}>
                     {deletePost => (
                         <button
                         onClick={() => this.handleDelete(deletePost)}
                         disabled={user !== data.getOnePost.username}
-                        />
+                        >
+                        Delete
+                        </button>
        )}
                     </Mutation>
+                <br />
+                <br />
+                    
+                   
+                    
+                  <div class="visible content">
                   
                     <div class="hidden content">
-                     <i class="cut icon"></i>
+                     
                     </div>
                     </div>
                     <CommentsFeed/>
-                </div>
+                
                 </div>
                     </Container>
 
