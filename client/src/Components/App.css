@@ -1,25 +1,29 @@
 .specialheader1 {
-  color: white;
+  color: white !important;
   font-family: 'Gilroy-Bold'
 }
 
 .specialheader2 {
-  color:white;
+  color:white !important;
   font-family: 'Gilroy-Light';
   font-style: italic;
 }
 
 h1 {
   font-family: 'Gilroy-Bold';
-  color: #4f1d31;
+  
 }
 
 h2 {
   font-family: 'Gilroy-Light';
-  color: #4f1d31;
+ 
 }
 
-
+.appContainer{
+  position:relative;
+  height: 100px;
+  
+}
 /* -----------
 Left Panel Styles
 ----------- */
@@ -53,10 +57,18 @@ div.ui.card{
 
 .cardHolder{
   position:relative;
-  top: 10px;
+  top: 30px;
+  
   float:left;
   display: inline-block;
   margin-right: 20px;
+  
+  
+}
+
+.cardHolderContainer{
+  position:relative;
+  right: 80px;
 }
 /* -----------
 Menu B Styles
@@ -113,6 +125,8 @@ div.ui.container.stackable.two.column.grid{
 /* LogoSpace */
 
 .logoSpace{
+  position: relative;
+  top:10%;
   margin-bottom:100px;
 }
 
@@ -175,8 +189,8 @@ div.ui.modal>.image.content{
 
 .submitBtn{
   position: relative;
-  top:30px;
-  
+  top:50px;
+  padding:30px;
   font-size:16px !important;
   border-radius: 5px;
 }
