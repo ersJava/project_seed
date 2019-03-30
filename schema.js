@@ -23,7 +23,7 @@ type User {
     _id: ID
     username: String! @unique
     password: String!
-    email: String!
+    email: String! @unique
     favorites: [Post]
 }
 
