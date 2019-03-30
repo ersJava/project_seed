@@ -49,13 +49,13 @@ class PostPage extends Component {
                     <div className="ui basic right pointing label">
                     {data.getOnePost.likes}
                     </div>
-                    <div className="ui button">
+                    <div className="ui red button">
                     <i className="heart icon"></i> <Like _id={_id}/>
                     </div>
                     </div>
                     <Mutation mutation={DELETE_POST} variables={{ _id }}>
                     {deletePost => (
-                        <button
+                        <button className="ui blue button"
                         onClick={() => this.handleDelete(deletePost)}
                         disabled={user !== data.getOnePost.username}
                         >

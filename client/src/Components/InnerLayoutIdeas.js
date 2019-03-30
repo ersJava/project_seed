@@ -16,7 +16,12 @@ class FeedbackForum extends Component {
                <h1>PROJECT IDEAS <i class="lightbulb outline icon"></i></h1>
                <p>Share your project ideas or get help and feedback!</p>
                     </Container>
-                     <Link to="/addideas">Add a Post</Link>
+                    <br/>
+                    <button class="ui labeled icon basic green button">
+                    <i class="pencil alternate icon"></i>
+                    <Link to="/addideas">Add a Post</Link>
+                    </button>
+                     
                      
                <Query query={GET_ALL_POSTS} fetchPolicy="network-only">
                 {({data,loading,error}) => {
