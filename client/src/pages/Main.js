@@ -8,9 +8,12 @@ function Login({ session }) {
     return (
             <div>
                 <Navbar session={session}/>
-                <Side />
-                <InnerLayoutMain />
+                <div className="ui grid">
+               
+                <div className="four wide column"><Side /></div>
+                <div className="ten wide column"><InnerLayoutMain /></div> 
 
+                </div>
             </div>
     );
   }
