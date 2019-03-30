@@ -11,9 +11,11 @@ https://wwww.projectseed.dev
 The goal of this platform is to allow new developers to gain experience working with others and to share any project ideas they want to create. This is beneficial for the more experienced developers who want to give back to the coder community and have another platform to continue to build a stronger online present.
 
 Each week selected projects will be featured on the front and main page.
-<img src="https://github.com/Rahat-ch/project_seed/blob/master/client/src/assets/images/login_ss.png" width="350" height="330" alt="project seed logo">
-![Screenshot of app]
-![Screenshot of app]
+<img src="https://github.com/Rahat-ch/project_seed/blob/master/client/src/assets/images/login_ss.png" width="550" height="330" alt="project seed logo">
+
+Login or create an account with your email address.
+<img src="https://github.com/Rahat-ch/project_seed/blob/master/client/src/assets/images/log_ss.png" width="550" height="330" alt="project seed logo">
+<img src="https://github.com/Rahat-ch/project_seed/blob/master/client/src/assets/images/create_ss.png" width="550" height="330" alt="project seed logo">
 
 ## Project Details
 
