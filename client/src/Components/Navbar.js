@@ -7,12 +7,12 @@ import Logout from '../Components/Logout';
 
 const Navbar = ({ session }) => (
   <div>
-    <Menu attached='top' className="inverted menu2" visible='wide'>
-    <Menu.Item className="menu2 inverted">
-       <a href="/main">PROJECT SEED</a>
+    <Menu attached='top' className="inverted menu2 ui grid" visible='wide'>
+    
+       <a href="/main" ><span className="navbarTitle">PROJECT SEED</span></a>
        
      
-        </Menu.Item>
+        
         {/* <h3>Hi {session.getCurrentUser.username}</h3> */}
       <Menu.Menu position='right' className="inverted">
         <Dropdown className="inverted" item icon='user circle inverted outline' simple>

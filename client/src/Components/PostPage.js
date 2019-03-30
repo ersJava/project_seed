@@ -1,19 +1,33 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-
-import { Query } from 'react-apollo';
-import { GET_ONE_POST } from '../queries';
 
 import Navbar from './Navbar';
 import CommentsFeed from './CommentsFeed';
 
 import { Header, Container} from 'semantic-ui-react'
 
-const PostPage = ({ match }) => {
-    const { _id } = match.params;
-    
-    return(
-        <Query query={GET_ONE_POST} variables={{ _id }}>
+import { Query, Mutation } from 'react-apollo';
+import { GET_ONE_POST, DELETE_POST } from '../queries'
+import Like from './Like';
+
+
+class PostPage extends Component {
+
+    handleDelete = (deletePost, history) => {
+    const confirmDelete = window.confirm("There is no coming back from this...are you sure you want to delete?");
+    if(confirmDelete){
+        deletePost().then(({ data }) => {
+            console.log(data);
+            this.props.history.push("/ideas");
+        });
+    }
+}
+
+    render() {
+        const { _id } = this.props.match.params;
+        const user = this.props.session.getCurrentUser.username;
+        return (
+            <Query query={GET_ONE_POST} variables={{ _id }}>
             {({ data, loading, error}) => {
                 if(loading) return <div>Loading</div>
                 if (error) return <div>Error</div>
@@ -50,7 +64,17 @@ const PostPage = ({ match }) => {
                     </div>
                     
                     <div class="ui animated button" tabindex="0">
-                    <div class="visible content">Delete</div>
+                    
+                  <div class="visible content">
+                     <Mutation mutation={DELETE_POST} variables={{ _id }}>
+                    {deletePost => (
+                        <button
+                        onClick={() => this.handleDelete(deletePost)}
+                        disabled={user !== data.getOnePost.username}
+                        >Delete</div>
+       )}
+                    </Mutation>
+                  
                     <div class="hidden content">
                      <i class="cut icon"></i>
                     </div>
@@ -58,10 +82,12 @@ const PostPage = ({ match }) => {
                     <CommentsFeed/>
                 </div>
                     </Container>
+
                 </div>)
             }}
         </Query>
-    )
+        );
+    }
 }
 
 export default withRouter(PostPage);

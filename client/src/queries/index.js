@@ -28,6 +28,7 @@ export const GET_ONE_POST = gql`
     
 `
 
+
 //post mutation
 
 export const ADD_POST = gql`
@@ -38,6 +39,23 @@ export const ADD_POST = gql`
             content
             createdAt
             username
+        }
+    }
+`
+
+export const DELETE_POST = gql`
+    mutation($_id: ID!) {
+        deletePost(_id: $_id){
+            _id
+        }
+    }
+`
+
+export const LIKE_POST = gql `
+    mutation($_id: ID!, $username: String!) {
+        likePost(_id: $_id, username: $username){
+            _id
+            likes
         }
     }
 `
