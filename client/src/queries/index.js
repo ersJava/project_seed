@@ -95,7 +95,10 @@ export const GET_CURRENT_USER = gql`
             _id
             username
             email
-            favorites
+            favorites{
+                _id
+                subject
+            }
         }
     }
 `;
