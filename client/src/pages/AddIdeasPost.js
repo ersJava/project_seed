@@ -45,15 +45,19 @@ class AddIdeasPost extends Component {
                 
                 
                 return (
-            <div>
-                <h2>Add Post</h2>
-                <form onSubmit={event => this.handleSubmit(event, addPost)}>
-                    <input type="text" name="subject" placeholder="Post Title" onChange={this.handleChange} value= {subject}/>
-                    <textarea name="content" cols="30" rows="10" placeholder="Post Body" onChange={this.handleChange} value= {content}></textarea>
-                    <button disabled={loading || this.validateForm()} type="submit">Submit</button>
+            <div className="addPostTemp">
+                <div className="postContainer">
+                
+                <h2><span className="postHeader">ADD A POST</span></h2>
+                <form className="postTest" onSubmit={event => this.handleSubmit(event, addPost)}>
+                   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" className="postTest2" name="subject" placeholder="Post Title" onChange={this.handleChange} value= {subject}/><br></br>
+                   
+                    <textarea className="postTest2" name="content" cols="30" rows="10" placeholder="Post Body" onChange={this.handleChange} value= {content}></textarea>
+                    <br></br><button className="postBtn" disabled={loading || this.validateForm()} type="submit">Submit</button>
                     {error && <Error error={error} />}
                 </form>
                 
+            </div>
             </div>
         );
             }}
