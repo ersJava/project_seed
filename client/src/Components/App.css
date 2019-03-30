@@ -189,8 +189,7 @@ div.ui.modal>.image.content{
 
 .submitBtn{
   position: relative;
-  top:50px;
-  padding:30px;
+  top:30px;
   font-size:16px !important;
   border-radius: 5px;
 }
