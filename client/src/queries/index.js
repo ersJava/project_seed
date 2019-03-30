@@ -98,16 +98,16 @@ export const GET_CURRENT_USER = gql`
     }
 `;
 
-export const GET_USER_PROFILE = gql`
-    query{
-        getUserProfile {
-            username
-            email
-            password
-            favorites
-        }
-    }
-`;
+// export const GET_USER_PROFILE = gql`
+//     query{
+//         getUserProfile {
+//             username
+//             email
+//             password
+//             favorites
+//         }
+//     }
+// `;
 
 // User mutations
 
