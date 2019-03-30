@@ -8,6 +8,10 @@ import Navbar from '../Components/Navbar';
 import Side from '../Components/Sidemenu';
 import '../Components/App.css';
 import InnerLayoutIdeas from '../Components/InnerLayoutIdeas';
+import { withRouter } from 'react-router-dom';
+import { Mutation } from 'react-apollo';
+import {ADD_POST} from '../queries'
+import Error from '../Components/Error';
 
 
 function FeedbackForum({ session, refetch }) {
