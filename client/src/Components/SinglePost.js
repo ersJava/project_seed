@@ -7,6 +7,7 @@ const SinglePost = ({_id, subject, username, createdAt, content}) => (
     <p>Username: {username}</p>
     <p>Created: {createdAt}</p>
     <p>Content: {content}</p>
+    
 
 </div>
 )
