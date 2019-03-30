@@ -8,7 +8,6 @@ import Logoletter from "../assets/images/pslogo_letter_only.png";
 import { render } from "react-dom";
 import ReactSVG from "react-svg";
 import Leaf from "../assets/images/leaf.svg";
-import { relative } from "path";
 
 const initialState = {
   username: "",
@@ -52,7 +51,7 @@ class LoginBtn extends Component {
 
     return (
       <div>
-       
+        <h2>Signup</h2>
         <Mutation
           mutation={SIGNUP_USER}
           variables={{ username, email, password }}
@@ -65,13 +64,10 @@ class LoginBtn extends Component {
                   trigger={
                     <Button
                       style={{
-                        position:"relative",
                         backgroundColor: "#450F42",
                         color: "white",
                         width: 330,
-                        height: 50,
-                        marginBottom:30,
-                        marginTop:110
+                        height: 50
                       }}
                     >
                       SIGN UP
