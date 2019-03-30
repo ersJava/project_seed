@@ -17,6 +17,10 @@ Login or create an account with your email address.
 <img src="https://github.com/Rahat-ch/project_seed/blob/master/client/src/assets/images/log_ss.png" width="550" height="330" alt="project seed logo">
 <img src="https://github.com/Rahat-ch/project_seed/blob/master/client/src/assets/images/create_ss.png" width="550" height="330" alt="project seed logo">
 
+The main page will have the featured projects of the week again along with the Project Idea page where you can find a project to work on or create a post for an idea you have. The other option is to find a team or create a team to find people to work on projects with.
+<img src="https://github.com/Rahat-ch/project_seed/blob/master/client/src/assets/images/main_ss.png" width="550" height="330" alt="project seed logo">
+<img src="https://github.com/Rahat-ch/project_seed/blob/master/client/src/assets/images/post_ss.png" width="550" height="330" alt="project seed logo">
+
 ## Project Details
 
 <!-- ### APIs
