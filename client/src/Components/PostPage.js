@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 
-import { Query } from 'react-apollo';
-import { GET_ONE_POST } from '../queries'
+import { Query, Mutation } from 'react-apollo';
+import { GET_ONE_POST, DELETE_POST } from '../queries'
 
-const PostPage = ({ match }) => {
-    const { _id } = match.params;
-    
-    return(
-        <Query query={GET_ONE_POST} variables={{ _id }}>
+class PostPage extends Component {
+
+    handleDelete = (deletePost, history) => {
+    const confirmDelete = window.confirm("There is no coming back from this...are you sure you want to delete?");
+    if(confirmDelete){
+        deletePost().then(({ data }) => {
+            console.log(data);
+            this.props.history.push("/ideas");
+        });
+    }
+}
+
+    render() {
+        const { _id } = this.props.match.params;
+        return (
+            <Query query={GET_ONE_POST} variables={{ _id }}>
             {({ data, loading, error}) => {
                 if(loading) return <div>Loading</div>
                 if (error) return <div>Error</div>
@@ -20,11 +31,21 @@ const PostPage = ({ match }) => {
                     <p> Content: {data.getOnePost.content}</p>
                     <p> Likes: {data.getOnePost.likes}</p>
                     <button>Like</button>
-                    <button>Delete</button>
+
+                    <Mutation mutation={DELETE_POST} variables={{ _id }}>
+                    {deletePost => (
+                        <button
+                        onClick={() => this.handleDelete(deletePost)}
+                        >
+                        Delete</button>
+                        
+                    )}
+                    </Mutation>
                 </div>)
             }}
         </Query>
-    )
+        );
+    }
 }
 
 export default withRouter(PostPage);
