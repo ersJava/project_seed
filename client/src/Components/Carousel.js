@@ -1,48 +1,39 @@
-import React, { Component } from 'react';
-import { Carousel } from 'react-bootstrap';
-import CarouselItem from './Carousel/CarouselItem'; // 5
+import React, { Component } from "react";
+import Slider from "react-slick";
 
-class CustomCarousel extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { // 2
-      index: 0,
-      direction: null,
-    };
-    this.handleSelect = this.handleSelect.bind(this); // 6
-  }
-
-  handleSelect(selectedIndex, e) {
-    this.setState({
-      index: selectedIndex,
-      direction: e.direction,
-    });
-  }
-
-  generateItems() { // 4
-    const { items } = this.props;
-    return items.map((item, index) => {
-      const active = (index === item.id);
-      return (<CarouselItem
-        key={`CI${item.id}`}
-        active={active}
-        direction={this.state.direction}
-        {...item} // 7
-      />);
-    });
-  }
-
+export default class SimpleSlider extends Component {
   render() {
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
     return (
-      <Carousel
-        activeIndex={this.state.index}
-        direction={this.state.direction}
-        onSelect={this.handleSelect}
-      >
-        {this.generateItems()}
-      </Carousel>
+      <div>
+        <h2> Single Item</h2>
+        <Slider {...settings}>
+          <div>
+            <h3>1</h3>
+          </div>
+          <div>
+            <h3>2</h3>
+          </div>
+          <div>
+            <h3>3</h3>
+          </div>
+          <div>
+            <h3>4</h3>
+          </div>
+          <div>
+            <h3>5</h3>
+          </div>
+          <div>
+            <h3>6</h3>
+          </div>
+        </Slider>
+      </div>
     );
   }
 }
-
-export default CustomCarousel;
