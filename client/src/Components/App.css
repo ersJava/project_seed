@@ -243,6 +243,7 @@ Project Idea
   display:inline-block;
   float:left;
   clear:both;
+  padding:10px;
  
   height: 96vh !important;
   
@@ -258,6 +259,7 @@ Project Idea
   text-align: center;
   padding-top:90px;
   border-bottom:1px solid rgb(219, 227, 215);
+  border-width: 120% !important;
   height:200px;
 }
 .customItem:hover{
