@@ -13,7 +13,7 @@ class Cards extends Component{
     </div>
     <div className="content">
     <a href={ this.props.deployLink } target="_blank" className="header">{ this.props.title }</a>
-      <div class="meta">
+      <div className="meta">
         <hr style={{color:"gray",opacity:0.2,width:150,marginLeft:"auto",marginRight:"auto"}}></hr>
       </div>
       <div className="description">
