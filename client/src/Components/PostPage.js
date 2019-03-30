@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 
 import { Query, Mutation } from 'react-apollo';
 import { GET_ONE_POST, DELETE_POST } from '../queries'
+import Like from './Like';
 
 class PostPage extends Component {
 
@@ -31,7 +32,7 @@ class PostPage extends Component {
                     <p> Created: {data.getOnePost.createdAt}</p>
                     <p> Content: {data.getOnePost.content}</p>
                     <p> Likes: {data.getOnePost.likes}</p>
-                    <button>Like</button>
+                    <Like _id={_id}/>
                     <Mutation mutation={DELETE_POST} variables={{ _id }}>
                     {deletePost => (
                         <button
