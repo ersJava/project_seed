@@ -200,17 +200,7 @@ div.ui.modal>.image.content{
 /* -----------
 Project Idea
 ----------- */
-/* 
-.ui.celled.padded.table {
-  margin-right: 40px;
-  margin-left: 40px;
-} */
 
-.table-cell {
-  width: 50px;
+.ui.center.aligned.header {
+  color: #4f1d31;
 }
-
-/* .table-header {
-  width: 50px;
-} */
-
