@@ -18,7 +18,7 @@ const SinglePost = ({_id, subject, username, createdAt, content}) => (
       </Grid.Column>
      
       <Grid.Column width={4}>
-      <Header as='h4' textAlign='center'>Date</Header>
+      <Header as='h4' textAlign='center'>Created</Header>
       </Grid.Column>
      
      <Grid.Column width={4}>
