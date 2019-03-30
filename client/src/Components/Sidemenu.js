@@ -4,31 +4,13 @@ import Seedling from "../Components/Seedling"
 import { Link } from 'react-router-dom';
 
 const Side= () => (
-  <Menu vertical>
-    <Sidebar as={Menu} animation='push' icon='labeled'  vertical visible width='thin'>
-    <Menu.Item as='a'>
-    <br></br>
-    <br></br>
-        <Icon name='users' />
-        START A TEAM
-      </Menu.Item>
-      <Menu.Item as='a'>
-      <br></br>
-      <br></br>
-        <Icon name='handshake outline' />
-        JOIN A TEAM
-      </Menu.Item>
-      <Link to="/ideas">
-      <Menu.Item as='a'>
-      <br></br>
-      <br></br>
-        <Icon name='lightbulb outline' />
-       PROJECT IDEAS
-      </Menu.Item>
-      </Link>
-      
-    </Sidebar>
-  </Menu>
+
+  
+
+  <div className="sideMenu">
+  </div>
+  
+    
 )
 
 export default Side

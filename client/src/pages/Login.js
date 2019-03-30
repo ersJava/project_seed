@@ -13,19 +13,21 @@ const Login = ({ refetch }) => {
 <div className="App">
     <div className="ui center aligned very padded grid">
       <div className="ten wide white column stackable leftPanel">
-     
+      <div className="appContainer"></div>
         <div className="specialheader1"><h1>Start GROWING your skills with Project Seed!</h1></div>
+        <br></br>
         <div className="specialheader2"><h2>Project Seed is a friendly online community
             for new developers who want to work on awesome projects, start a team 
             or have an exciting idea for a new application!</h2></div>
 
        {/* ================= Current Project Grid=================*/}
-       <div className = "ui grid "><div className="column four wide"></div>
+       <div className = "ui grid ">
+       <div className="column two wide"></div>
   {/* fake column to help span it out properly */}
-        <div className = "column twelve wide">
-           
-       <div className="ui two column doubling  grid container">
-
+        <div className = "column fourteen wide">
+        
+       <div className="ui ten column  grid container">
+       <div className="cardHolderContainer">
        <Query query={GET_ALL_PROJECTS}>
         {({ data, loading, error}) => {
           if (loading) return <div>Loading</div>
@@ -44,7 +46,7 @@ const Login = ({ refetch }) => {
         }}
        
        </Query>
-       
+       </div>
       </div>
       </div>
         </div>
@@ -58,6 +60,7 @@ const Login = ({ refetch }) => {
               <br></br> 
             </div>
           </div>
+          
           {/* ================= End Panel Layout================= */}
   </div>
   

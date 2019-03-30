@@ -46,7 +46,7 @@ class Signup extends Component {
         
         return (
             <div>
-               <h2>Signup</h2>
+               
                <Mutation mutation={SIGNUP_USER} variables= {{ username, email, password }}>
                    {(signupUser, { data, loading, error}) => {
 
