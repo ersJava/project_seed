@@ -20,6 +20,7 @@ const PostPage = ({ match }) => {
                     <p> Content: {data.getOnePost.content}</p>
                     <p> Likes: {data.getOnePost.likes}</p>
                     <button>Like</button>
+                    <button>Delete</button>
                 </div>)
             }}
         </Query>
