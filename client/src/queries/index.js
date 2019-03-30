@@ -42,6 +42,14 @@ export const ADD_POST = gql`
     }
 `
 
+export const DELETE_POST = gql`
+    mutation($_id: ID!) {
+        deletePost(_id: $_id){
+            _id
+        }
+    }
+`
+
 // Project query
 export const GET_ALL_PROJECTS = gql`
     query{
