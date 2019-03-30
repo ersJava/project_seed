@@ -22,11 +22,11 @@ const Login = ({ refetch }) => {
 
        {/* ================= Current Project Grid=================*/}
        <div className = "ui grid ">
-       <div className="column four wide"></div>
+       <div className="column two wide"></div>
   {/* fake column to help span it out properly */}
-        <div className = "column twelve wide">
-           
-       <div className="ui two column doubling  grid container">
+        <div className = "column fourteen wide">
+        
+       <div className="ui ten column  grid container">
        <div className="cardHolderContainer">
        <Query query={GET_ALL_PROJECTS}>
         {({ data, loading, error}) => {

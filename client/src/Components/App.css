@@ -35,20 +35,24 @@ Left Panel Styles
   background-attachment: fixed;
 }
 
-div.ui.card{
-  margin: 10px !important;
-  float:left !important;
-  width: 350px;
-  min-height: 400px;
+div.ui.cards{
+
+  
+  margin-bottom: 20px;
+  margin-left: 3px;
 }
 
 .image{
-  height: 100% !important;
+  height: 200px !important;
   background-color: #e5ebde !important;
+}
+.description{
+  height: 150px !important;
+  
 }
 
 .thumbnailImg{
-  height: 100% !important;
+ 
 }
 
 .break{
@@ -58,17 +62,16 @@ div.ui.card{
 .cardHolder{
   position:relative;
   top: 30px;
-  
   float:left;
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 10px;
   
   
 }
 
 .cardHolderContainer{
   position:relative;
-  right: 80px;
+  right: 40px;
 }
 /* -----------
 Menu B Styles
