@@ -6,7 +6,11 @@ import Cards from './Card';
 class Main extends Component {
     render() {
         return (
+           
             <div style={{overflow: "auto"}}>
+            <br/>
+             <h1>FEATURED PROJECTS <i class="users icon icon"></i></h1>
+               <p>Checkout some of the featured projects of the week.</p>
                 <Query query = {GET_ALL_PROJECTS}>
                     {({ data, loading, error}) => {
                         if (loading) return <div>Loading</div>
@@ -25,6 +29,7 @@ class Main extends Component {
                     }}
                 </Query>
             </div>
+            
         )
     };
 }
