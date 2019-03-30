@@ -8,15 +8,15 @@ const Side= () => (
   
 
   <div className="sideMenu">
-  <Link to=""><div className="customItem">
+  <Link to="/main"><div className="customItem">
    <i class="users icon"></i> &nbsp;
     Featured Projects 
    </div></Link>
-   <Link to=""><div className="customItem">
+   <Link to="#"><div className="customItem">
    <i class="child icon"></i> &nbsp;
    Join A Team 
    </div></Link>
-   <Link to="/addideas"><div className="customItem">
+   <Link to="/ideas"><div className="customItem">
    <i class="lightbulb outline icon"></i> &nbsp;
    
    Post A Project Idea
