@@ -184,3 +184,17 @@ div.ui.modal>.image.content{
 /* -----------
 Project Idea
 ----------- */
+/* 
+.ui.celled.padded.table {
+  margin-right: 40px;
+  margin-left: 40px;
+} */
+
+.table-cell {
+  width: 50px;
+}
+
+/* .table-header {
+  width: 50px;
+} */
+
