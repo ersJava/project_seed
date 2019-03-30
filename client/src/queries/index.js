@@ -60,6 +60,15 @@ export const LIKE_POST = gql `
     }
 `
 
+export const UNLIKE_POST = gql `
+    mutation($_id: ID!, $username: String!) {
+        unlikePost(_id: $_id, username: $username){
+            _id
+            likes
+        }
+    }
+`
+
 // Project query
 export const GET_ALL_PROJECTS = gql`
     query{

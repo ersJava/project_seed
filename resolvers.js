@@ -61,6 +61,11 @@ exports.resolvers={
             const user = await User.findOneAndUpdate({ username }, { $addToSet: { favorites: _id}});
             return post;
         },
+        unlikePost: async (root, { _id, username }, { Post, User }) => {
+            const post = await Post.findOneAndUpdate({ _id }, { $inc: { likes: -1} });
+            const user = await User.findOneAndUpdate({ username }, { $pull: { favorites: _id}});
+            return post;
+        },
         deletePost: async (root, { _id }, {Post}) => {
             const post = await Post.findOneAndRemove({ _id });
             return post
