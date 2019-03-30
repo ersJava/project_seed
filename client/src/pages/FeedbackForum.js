@@ -10,7 +10,7 @@ import '../Components/App.css';
 import InnerLayoutIdeas from '../Components/InnerLayoutIdeas';
 
 
-function Login({ session, refetch }) {
+function FeedbackForum({ session, refetch }) {
     return (
       <div style={{overflow: "hidden",height:"100vh"}}>
       <Navbar session={session}/>
@@ -25,4 +25,4 @@ function Login({ session, refetch }) {
     );
   }
   
-  export default Login;
+  export default FeedbackForum;
