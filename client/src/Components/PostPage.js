@@ -68,9 +68,9 @@ class PostPage extends Component {
                     
                    
                     
-                  <div class="visible content">
+                  <div className="visible content">
                   
-                    <div class="hidden content">
+                    <div className="hidden content">
                      
                     </div>
                     </div>
