@@ -12,14 +12,16 @@ import InnerLayoutIdeas from '../Components/InnerLayoutIdeas';
 
 function Login({ session, refetch }) {
     return (
-            <div>
-                <Navbar session={session}/>
-                <Side />
-                <InnerLayoutIdeas refetch={refetch}/>
-               
-               <Link to="/addideas">Add a Post</Link>
-
-            </div>
+      <div style={{overflow: "hidden",height:"100vh"}}>
+      <Navbar session={session}/>
+      <div className="ui grid">
+     
+      <div className="two wide column"><Side /></div>
+      <div style={{overflow: "hidden"}} className="fourteen wide column" > <InnerLayoutIdeas refetch={refetch}/></div> 
+      <Link to="/addideas">Add a Post</Link>
+      </div>
+  </div>
+          
     );
   }
   
