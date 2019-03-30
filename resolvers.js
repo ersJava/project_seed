@@ -42,6 +42,13 @@ exports.resolvers={
             });
             return user;
         },
+        getUserProfile: async (root, args, { currentUser, User}) => {
+            // if (!currentUser) {
+            // //     return null;
+            // }
+            const userProfile = await User.find({ User })
+            return userProfile;
+        }
     },
     Mutation: {
         //this is a mutation that allows you to add more posts

@@ -71,8 +71,10 @@ class PostPage extends Component {
                         <button
                         onClick={() => this.handleDelete(deletePost)}
                         disabled={user !== data.getOnePost.username}
-                        />
-       )}
+                        >
+                        Delete</button>
+                        
+                    )}
                     </Mutation>
                   
                     <div class="hidden content">

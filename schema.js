@@ -51,6 +51,7 @@ type Query {
     getAllComments: [Comment]
     getAllProjects: [Project]
     getCurrentUser: User
+    getUserProfile: User
 }
 
 type Token {
