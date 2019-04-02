@@ -10,14 +10,12 @@ const CommentSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    post: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Post",
+    postID: {
+        type: String,
         required: true
     },
-    commentedBy: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
+    username: {
+        type: String,
         required: true
     }
 });
