@@ -84,7 +84,6 @@ graphqlExpress(({ currentUser }) => ({
         Comment,
         Project,
         StartPost,
-        currentUser
 
     }
 })));

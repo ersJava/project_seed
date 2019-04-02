@@ -1,0 +1,32 @@
+
+import React, { Component } from 'react';
+import { Query } from 'react-apollo';
+import { GET_ALL_POSTS } from '../queries'
+import { Link } from 'react-router-dom';
+import SinglePost from '../Components/SinglePost';
+import Navbar from '../Components/Navbar';
+import Side from '../Components/Sidemenu';
+import '../Components/App.css';
+import InnerLayoutTeam from '../Components/InnerLayoutTeam';
+import { withRouter } from 'react-router-dom';
+import { Mutation } from 'react-apollo';
+import {ADD_POST} from '../queries'
+import Error from '../Components/Error';
+
+
+function FeedbackForum2({ session, refetch }) {
+    return (
+      <div style={{overflow: "hidden",height:"100vh"}}>
+      <Navbar session={session}/>
+      <div className="ui grid">
+     
+      <div className="two wide column"><Side /></div>
+      <div style={{overflow: "hidden"}} className="fourteen wide column" > <InnerLayoutTeam refetch={refetch}/></div> 
+      <Link to="/addideas">Add a Post</Link>
+      </div>
+  </div>
+          
+    );
+  }
+  
+  export default FeedbackForum2;

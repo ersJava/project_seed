@@ -48,6 +48,7 @@ type Project {
 type Query {
     getAllPosts: [Post]
     getOnePost(_id: ID!): Post
+    getOneStartPost(_id: ID!): StartPost
     getPostComments(postID: ID!): [Comment]
     getAllStartPosts: [StartPost]
     getAllComments: [Comment]
@@ -68,9 +69,15 @@ type Mutation {
 
     unlikePost(_id: ID!, username: String!): Post
 
-    addPostComment(comment: String!, postID: ID!, username: String!): Comment
-    
     addStartPost(subject: String!, content: String!, username: String): StartPost
+
+    deleteStartPost(_id: ID): StartPost
+
+    likeStartPost(_id: ID!, username: String!): StartPost
+
+    unlikeStartPost(_id: ID!, username: String!): StartPost
+
+    addPostComment(comment: String!, postID: ID!, username: String!): Comment
 
     addComment(comment: String!, username: String): Comment
 

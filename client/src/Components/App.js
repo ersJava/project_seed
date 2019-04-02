@@ -11,7 +11,12 @@ import Signup from "../pages/Auth/Signup";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import FeedbackForum from '../pages/FeedbackForum';
+import FeedbackForum2 from '../pages/FeedbackForum2';
+
+
+import StartPostPage from './StartPostPage'
 import PostPage from './PostPage';
+import StartTeamPost from '../pages/StartTeamPost';
 import AddIdeasPost from '../pages/AddIdeasPost';
 
 
@@ -27,8 +32,12 @@ const App = ({ refetch, session }) => (
         <Route exact path="/signin" render={() => <Signin refetch={refetch}/>} />
         <Route exact path="/signup" render={() => <Signup refetch={refetch}/>} />
         <Route exact path="/ideas" render={() => <FeedbackForum refetch={refetch}/>}  />
+        <Route exact path="/teams" render={() => <FeedbackForum2 refetch={refetch}/>}  />
+
         <Route exact path="/about" render={() => <About refetch={refetch}/>}  />
+        <Route path="/startposts/:_id" render={() => <StartPostPage session={session}/>} />
         <Route path="/posts/:_id" render={() => <PostPage session={session}/>} />
+        <Route exact path="/addTeam" render={() => <StartTeamPost session={session} refetch={refetch}/>}/>
         <Route exact path="/addIdeas" render={() => <AddIdeasPost session={session} refetch={refetch}/>}  />
      </div>
     </Router>
