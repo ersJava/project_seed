@@ -43,7 +43,7 @@ const corsOrigin = "http://localhost:3000" || "https://projectseeddev.herokuapp.
 const corsOrigin1 = "https://www.projectseed.dev/";
 
 const corsOptions = {
-    origin: corsOrigin || corsOrigin1,
+    origin: corsOrigin1,
     credentials: true
 
 };
