@@ -1,14 +1,13 @@
-import React from "react";
+import React, { Component } from 'react';
+import withSession from './withSession';
+import { Mutation } from 'react-apollo';
+import { LIKE_POST, GET_ONE_POST } from '../queries';
 
-import { Mutation } from "react-apollo";
-import { LIKE_POST, UNLIKE_POST, GET_ONE_POST } from "../queries";
-import withSession from "../Components/withSession";
-
-class Like extends React.Component {
+class Like extends Component {
   state = {
     liked: false,
-    username: ""
-  };
+    username: ''
+  }
 
   componentDidMount() {
     if (this.props.session.getCurrentUser) {
@@ -23,92 +22,62 @@ class Like extends React.Component {
     }
   }
 
-  handleClick = (likePost, unlikePost) => {
-    this.setState(
-      prevState => ({
-        liked: !prevState.liked
-      }),
-      () => this.handleLike(likePost, unlikePost)
-    );
-  };
+  handleClick = likePost => {
+    this.setState(prevState => ({
+      liked: !prevState.liked
+    }),
+    () => this.handleLike(likePost)
+    )
+  }
 
-  handleLike = (likePost, unlikePost) => {
-    if (this.state.liked) {
-      likePost().then(async ({ data }) => {
-        // console.log(data);
-        await this.props.refetch();
-        window.location.reload();
-      });
-    } else {
-      unlikePost().then(async ({ data }) => {
-        // console.log(data);
-        await this.props.refetch();
-        window.location.reload();
-      });
-    }
-  };
-
-  updateLike = (cache, { data: { likePost } }) => {
-    const { _id } = this.props;
-    const { getPost } = cache.readQuery({
-      query: GET_ONE_POST,
-      variables: { _id }
+  handleLike = likePost => {
+    if(this.state.liked) {
+    likePost().then(async({ data}) => {
+      await this.props.refetch();
     });
+  } else {
+    //unlike recipe mutation
+    console.log("unliked")
+  }
+  };
+
+  updateLike = (cache, { data : { likePost } }) => {
+    const { _id } = this.props;
+    const { getOnePost } = cache.readQuery({
+       query: GET_ONE_POST, 
+       variables: { _id }
+      });
 
     cache.writeQuery({
       query: GET_ONE_POST,
       variables: { _id },
       data: {
-        getOnePost: { ...getPost, likes: likePost.likes + 1 }
+        getOnePost: {...getOnePost, likes: likePost + 1}
       }
-    });
-  };
-
-  updateUnlike = (cache, { data: { unlikePost } }) => {
-    const { _id } = this.props;
-    const { getPost } = cache.readQuery({
-      query: GET_ONE_POST,
-      variables: { _id }
-    });
-
-    cache.writeQuery({
-      query: GET_ONE_POST,
-      variables: { _id },
-      data: {
-        getOnePost: { ...getPost, likes: unlikePost.likes - 1 }
-      }
-    });
-  };
+    })
+  }
 
   render() {
     const { liked, username } = this.state;
     const { _id } = this.props;
-    return (
-      <Mutation
-        mutation={UNLIKE_POST}
-        variables={{ _id, username }}
-        update={this.updateUnlike}
-      >
-        {unlikePost => (
-          <Mutation
-            mutation={LIKE_POST}
-            variables={{ _id, username }}
-            update={this.updateLike}
-          >
-            {likePost =>
-              username && (
-                <span
-                  className="like-button"
-                  onClick={() => this.handleClick(likePost, unlikePost)}
-                >
-                  {liked ? "Unlike" : "Like"}
-                </span>
-              )
-            }
-          </Mutation>
-        )}
-      </Mutation>
+
+   return (<Mutation 
+   mutation={LIKE_POST} 
+   variables={{_id, username}}
+   update={this.updateLike}
+   >
+   {likePost => {
+
+
+    return ( username &&
+      <button onClick={() => this.handleClick(likePost)} className="ui red button">
+      <i className="heart icon"></i> 
+      {liked ? 'Following' : 'Follow'}
+      </button>
     );
+   }}
+    
+    </Mutation>)
   }
 }
 
