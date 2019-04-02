@@ -31,7 +31,8 @@ type Comment {
     _id: ID
     comment: String!
     createdAt: String
-    username: String
+    postID: String!
+    username: String!
 }
 
 type Project {
@@ -47,6 +48,7 @@ type Project {
 type Query {
     getAllPosts: [Post]
     getOnePost(_id: ID!): Post
+    getPostComments(postID: ID!): [Comment]
     getAllStartPosts: [StartPost]
     getAllComments: [Comment]
     getAllProjects: [Project]
@@ -65,6 +67,8 @@ type Mutation {
     likePost(_id: ID!, username: String!): Post
 
     unlikePost(_id: ID!, username: String!): Post
+
+    addPostComment(comment: String!, postID: ID!, username: String!): Comment
     
     addStartPost(subject: String!, content: String!, username: String): StartPost
 

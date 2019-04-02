@@ -19,6 +19,10 @@ exports.resolvers={
             const post = await Post.findOne({ _id });
             return post;
         },
+        getPostComments: async (root, {postID}, { Comment }) => {
+            const comment = await Comment.find({postID: postID});
+            return comment
+        },
         getAllStartPosts: async (root, args, { StartPost }) => {
             const allStartPosts = await StartPost.find();
             return allStartPosts;
@@ -69,6 +73,14 @@ exports.resolvers={
         deletePost: async (root, { _id }, {Post}) => {
             const post = await Post.findOneAndRemove({ _id });
             return post
+        },
+        addPostComment: async (root, {comment, postID, username}, {Comment}) => {
+            const newComment = await new Comment({
+                comment,
+                postID,
+                username
+            }).save();
+            return newComment;
         },
         addStartPost: async (root, { subject, content, username, comments }, { StartPost }) => {
             const newStartPost = await new StartPost({
