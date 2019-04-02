@@ -5,6 +5,7 @@ import './App.css';
 import Post from "./Post";
 import Login from "../pages/Login";
 import Main from "../pages/Main";
+import About from "../pages/About";
 import Signin from "../pages/Auth/Signin";
 import Signup from "../pages/Auth/Signup";
 
@@ -26,6 +27,7 @@ const App = ({ refetch, session }) => (
         <Route exact path="/signin" render={() => <Signin refetch={refetch}/>} />
         <Route exact path="/signup" render={() => <Signup refetch={refetch}/>} />
         <Route exact path="/ideas" render={() => <FeedbackForum refetch={refetch}/>}  />
+        <Route exact path="/about" render={() => <About refetch={refetch}/>}  />
         <Route path="/posts/:_id" render={() => <PostPage session={session}/>} />
         <Route exact path="/addIdeas" render={() => <AddIdeasPost session={session} refetch={refetch}/>}  />
      </div>

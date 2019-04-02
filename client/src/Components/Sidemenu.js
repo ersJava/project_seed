@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Side= () => (
 
   
-
+ 
   <div className="sideMenu">
 
   <Link to="/main"><div className="customItem">
@@ -20,6 +20,10 @@ const Side= () => (
    <Link to="/ideas"><div className="customItem">
    <i className="lightbulb outline icon"></i> &nbsp;
     Post A Project Idea
+   </div></Link>
+   <Link to="/about"><div className="customItem">
+   <i className="leaf icon"></i> &nbsp;
+    About
    </div></Link>
    
   </div>
