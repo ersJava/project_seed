@@ -38,10 +38,12 @@ mongoose
 // this initializes our application
 const app = express();
 
-const corsOrigin = "http://localhost:3000" || "https://projectseeddev.herokuapp.com/" || "https://www.projectseed.dev/";
+const corsOrigin = "http://localhost:3000" || "https://projectseeddev.herokuapp.com/";
+
+const corsOrigin1 = "https://www.projectseed.dev/";
 
 const corsOptions = {
-    origin: corsOrigin,
+    origin: corsOrigin || corsOrigin1,
     credentials: true
 
 };
