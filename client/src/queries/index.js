@@ -69,6 +69,44 @@ export const UNLIKE_POST = gql `
     }
 `
 
+export const ADD_START_POST = gql`
+    mutation($subject: String!, $content: String!, $username: String) {
+        addStartPost(subject: $subject, content: $content, username: $username){
+            _id
+            subject
+            content
+            createdAt
+            username
+        }
+    }
+`
+
+export const DELETE_START_POST = gql`
+    mutation($_id: ID!) {
+        deleteStartPost(_id: $_id){
+            _id
+        }
+    }
+`
+
+export const LIKE_START_POST = gql `
+    mutation($_id: ID!, $username: String!) {
+        likeStartPost(_id: $_id, username: $username){
+            _id
+            likes
+        }
+    }
+`
+
+export const UNLIKE_START_POST = gql `
+    mutation($_id: ID!, $username: String!) {
+        unlikeStartPost(_id: $_id, username: $username){
+            _id
+            likes
+        }
+    }
+`
+
 // Project query
 export const GET_ALL_PROJECTS = gql`
     query{
@@ -96,6 +134,21 @@ export const GET_ALL_START_POSTS = gql`
         }
     }
 `;
+
+export const GET_ONE_START_POST = gql`
+    query($_id: ID!) {
+        getOneStartPost(_id: $_id) {
+             _id
+             subject
+             content
+             createdAt
+             likes
+            username
+            }
+        }
+    
+`
+
 // User query
 
 export const GET_CURRENT_USER = gql`

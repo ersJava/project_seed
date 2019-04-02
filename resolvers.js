@@ -23,6 +23,10 @@ exports.resolvers={
             const comment = await Comment.find({postID: postID});
             return comment
         },
+        getOneStartPost: async (root, { _id }, { Post }) => {
+            const post = await Post.findOne({ _id });
+            return post;
+        },
         getAllStartPosts: async (root, args, { StartPost }) => {
             const allStartPosts = await StartPost.find();
             return allStartPosts;
@@ -73,6 +77,29 @@ exports.resolvers={
         deletePost: async (root, { _id }, {Post}) => {
             const post = await Post.findOneAndRemove({ _id });
             return post
+        },
+        addStartPost: async (root, { subject, content, username, comments }, { StartPost }) => {
+            const newStartPost = await new StartPost({
+                subject,
+                content,
+                username,
+                comments
+            }).save();
+            return newStartPost
+        },
+        likeStartPost: async (root, { _id, username }, { StartPost, User }) => {
+            const Startpost = await StartPost.findOneAndUpdate({ _id }, { $inc: { likes: 1} });
+            const user = await User.findOneAndUpdate({ username }, { $addToSet: { favorites: _id}});
+            return Startpost;
+        },
+        unlikeStartPost: async (root, { _id, username }, { StartPost, User }) => {
+            const Startpost = await StartPost.findOneAndUpdate({ _id }, { $inc: { likes: -1} });
+            const user = await User.findOneAndUpdate({ username }, { $pull: { favorites: _id}});
+            return Startpost;
+        },
+        deleteStartPost: async (root, { _id }, {StartPost}) => {
+            const Startpost = await StartPost.findOneAndRemove({ _id });
+            return Startpost
         },
         addPostComment: async (root, {comment, postID, username}, {Comment}) => {
             const newComment = await new Comment({
