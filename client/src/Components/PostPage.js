@@ -46,12 +46,7 @@ class PostPage extends Component {
                     <p>{data.getOnePost.content}</p>
                 <br/>
                     <div className="ui left labeled button" tabindex="0">
-                    <div className="ui basic right pointing label">
-                    {data.getOnePost.likes}
-                    </div>
-                    <div className="ui red button">
-                    <i className="heart icon"></i> <Like _id={_id}/>
-                    </div>
+                    <Like _id={_id}/>
                     </div>
                     <Mutation mutation={DELETE_POST} variables={{ _id }}>
                     {deletePost => (
